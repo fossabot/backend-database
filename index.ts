@@ -15,7 +15,7 @@ import { RewardCatalogueEntity } from './src/entities/rewardCatalogue/rewardCata
 import { TagEntity } from './src/entities/tag/tag.entity';
 import { UserEntity } from './src/entities/user/user.entity';
 
-export = {
+module.exports = {
   AddressEntity,
   CategoryEntity,
   InstitutionEntity,
