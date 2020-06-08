@@ -1,34 +1,24 @@
-/* Entities */
-import { AddressEntity } from './src/entities/address/address.entity';
-import { CategoryEntity } from './src/entities/category/category.entity';
-import { InstitutionEntity } from './src/entities/institution/institution.entity';
-import { InstitutionAdminEntity } from './src/entities/institutionadmin/institutionAdmin.entity';
-import { InstitutionalItemEntity } from './src/entities/institutionalItem/institutionalItem.entity';
-import { InstitutionalOfferEntity } from './src/entities/institutionalOffer/institutionalOffer.entity';
-import { InstitutionalRequestEntity } from './src/entities/institutionalRequest/institutionalRequest.entity';
-import { InstitutionMemberEntity } from './src/entities/institutionMember/institutionMember.entity';
-import { InstitutionTypeEntity } from './src/entities/institutionType/institutionType.entity';
-import { PrivateItemEntity } from './src/entities/privateItem/institutionalItem.entity';
-import { PrivateOfferEntity } from './src/entities/privateOffer/privateOffer.entity';
-import { PrivateRequestEntity } from './src/entities/privateRequest/privateRequest.entity';
-import { RewardCatalogueEntity } from './src/entities/rewardCatalogue/rewardCatalogue.entity';
-import { TagEntity } from './src/entities/tag/tag.entity';
-import { UserEntity } from './src/entities/user/user.entity';
+/*
+ * Entities
+ * */
+export { AddressEntity } from './src/entities/address/address.entity';
+export { CategoryEntity } from './src/entities/category/category.entity';
+export { InstitutionEntity } from './src/entities/institution/institution.entity';
+export { InstitutionAdminEntity } from './src/entities/institutionadmin/institutionAdmin.entity';
+export { InstitutionalItemEntity } from './src/entities/institutionalItem/institutionalItem.entity';
+export { InstitutionalOfferEntity } from './src/entities/institutionalOffer/institutionalOffer.entity';
+export { InstitutionalRequestEntity } from './src/entities/institutionalRequest/institutionalRequest.entity';
+export { InstitutionMemberEntity } from './src/entities/institutionMember/institutionMember.entity';
+export { InstitutionTypeEntity } from './src/entities/institutionType/institutionType.entity';
+export { PrivateItemEntity } from './src/entities/privateItem/institutionalItem.entity';
+export { PrivateOfferEntity } from './src/entities/privateOffer/privateOffer.entity';
+export { PrivateRequestEntity } from './src/entities/privateRequest/privateRequest.entity';
+export { RewardCatalogueEntity } from './src/entities/rewardCatalogue/rewardCatalogue.entity';
+export { TagEntity } from './src/entities/tag/tag.entity';
+export { UserEntity } from './src/entities/user/user.entity';
 
-module.exports = {
-  AddressEntity,
-  CategoryEntity,
-  InstitutionEntity,
-  InstitutionAdminEntity,
-  InstitutionalItemEntity,
-  InstitutionalOfferEntity,
-  InstitutionalRequestEntity,
-  InstitutionMemberEntity,
-  InstitutionTypeEntity,
-  PrivateItemEntity,
-  PrivateOfferEntity,
-  PrivateRequestEntity,
-  RewardCatalogueEntity,
-  TagEntity,
-  UserEntity
-};
+/*
+ * DTOs
+ * */
+export * as CategoryRequests from './src/entities/category/requests.dto';
+export * as CategoryResponses from './src/entities/category/responses.dto';
