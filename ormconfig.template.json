@@ -1,12 +1,12 @@
 {
    "type": "postgres",
-   "host": "localhost",
+   "host": "",
    "port": 5432,
-   "username": "postgres",
-   "password": "12345678",
-   "database": "impact",
-   "uuidExtension": "pgcrypto",
-   "synchronize": true,
+   "username": "",
+   "password": "",
+   "database": "",
+   "uuidExtension": "",
+   "synchronize": false,
    "logging": false,
    "entities": [
       "src/entities/**/*.ts"
