@@ -4,7 +4,9 @@ The latter are dependent on [NestJS](https://docs.nestjs.com/) used for microser
 The ORM used is [TypeORM](https://typeorm.io).
 
 ## Setup & Usage
-You only have to run `npm i`.
+You only have to run `npm i` to install dependencies.
+
+You have to rename *ormconfig.template.json* to *ormconfig.json* and fill out the template according to your desired configuration 
 
 * Syncing: `npm run sync`
 
