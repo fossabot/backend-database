@@ -6,6 +6,9 @@ import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOff
 import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
 import { PrivateOfferEntity } from '../privateOffer/privateOffer.entity';
 import { PrivateRequestEntity } from '../privateRequest/privateRequest.entity';
+import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
+import { InstitutionalMatchingProfileEntity } from '../institutionalMatchingProfile/institutionalMatchingProfile.entity';
+import { PrivateMatchingProfileEntity } from '../privateMatchingProfile/privateMatchingProfile.entity';
 
 @Entity('categories')
 export class CategoryEntity extends BaseEntity {
@@ -23,29 +26,26 @@ export class CategoryEntity extends BaseEntity {
    * Relations
    * */
   @ManyToMany(() => InstitutionEntity, (institution) => institution.categories)
-  institutions: InstitutionEntity[];
+  institutions?: InstitutionEntity[];
 
-  @ManyToMany(
-    () => InstitutionalOfferEntity,
-    (institutionalOffer) => institutionalOffer.categories
-  )
-  institutionalOffers: InstitutionalOfferEntity[];
+  @ManyToMany(() => InstitutionalOfferEntity, (institutionalOffer) => institutionalOffer.categories)
+  institutionalOffers?: InstitutionalOfferEntity[];
 
-  @ManyToMany(
-    () => InstitutionalRequestEntity,
-    (institutionalRequest) => institutionalRequest.categories
-  )
-  institutionalRequests: InstitutionalRequestEntity[];
+  @ManyToMany(() => InstitutionalRequestEntity, (institutionalRequest) => institutionalRequest.categories)
+  institutionalRequests?: InstitutionalRequestEntity[];
 
-  @ManyToMany(
-    () => PrivateOfferEntity,
-    (privateOffer) => privateOffer.categories
-  )
-  privateOffers: InstitutionalOfferEntity[];
+  @ManyToMany(() => PrivateOfferEntity, (privateOffer) => privateOffer.categories)
+  privateOffers?: InstitutionalOfferEntity[];
 
-  @ManyToMany(
-    () => PrivateRequestEntity,
-    (privateRequest) => privateRequest.categories
-  )
-  privateRequests: InstitutionalRequestEntity[];
+  @ManyToMany(() => PrivateRequestEntity, (privateRequest) => privateRequest.categories)
+  privateRequests?: InstitutionalRequestEntity[];
+
+  @ManyToMany(() => RewardDefinitionEntity, (rewardDefinition) => rewardDefinition.categories)
+  rewardDefinitions?: RewardDefinitionEntity[];
+
+  @ManyToMany(() => InstitutionalMatchingProfileEntity, (institutionalMatchingProfile) => institutionalMatchingProfile.categories)
+  institutionalMatchingProfiles?: InstitutionalMatchingProfileEntity[];
+
+  @ManyToMany(() => PrivateMatchingProfileEntity, (privateMatchingProfile) => privateMatchingProfile.categories)
+  privateMatchingProfiles?: PrivateMatchingProfileEntity[];
 }

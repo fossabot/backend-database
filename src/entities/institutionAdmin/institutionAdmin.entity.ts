@@ -10,9 +10,6 @@ export class InstitutionAdminEntity {
   /*
    * Relations
    * */
-  @OneToOne(
-    () => InstitutionEntity,
-    (institution) => institution.institutionAdmin
-  )
+  @OneToOne(() => InstitutionEntity, (institution) => institution.institutionAdmin)
   institution: InstitutionEntity;
 }

@@ -5,6 +5,8 @@ import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOff
 import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
 import { PrivateOfferEntity } from '../privateOffer/privateOffer.entity';
 import { PrivateRequestEntity } from '../privateRequest/privateRequest.entity';
+import { InstitutionalMatchingProfileEntity } from '../institutionalMatchingProfile/institutionalMatchingProfile.entity';
+import { PrivateMatchingProfileEntity } from '../privateMatchingProfile/privateMatchingProfile.entity';
 
 @Entity('tags')
 export class TagEntity extends BaseEntity {
@@ -16,24 +18,21 @@ export class TagEntity extends BaseEntity {
   /*
    * Relations
    * */
-  @ManyToMany(
-    () => InstitutionalOfferEntity,
-    (institutionalOffer) => institutionalOffer.tags
-  )
+  @ManyToMany(() => InstitutionalOfferEntity, (institutionalOffer) => institutionalOffer.tags)
   institutionalOffers?: InstitutionalOfferEntity[];
 
-  @ManyToMany(
-    () => InstitutionalRequestEntity,
-    (institutionalRequest) => institutionalRequest.tags
-  )
+  @ManyToMany(() => InstitutionalRequestEntity, (institutionalRequest) => institutionalRequest.tags)
   institutionalRequests?: InstitutionalRequestEntity[];
 
   @ManyToMany(() => PrivateOfferEntity, (privateOffer) => privateOffer.tags)
-  privateOffers: InstitutionalOfferEntity[];
+  privateOffers?: PrivateOfferEntity[];
 
-  @ManyToMany(
-    () => PrivateRequestEntity,
-    (privateRequest) => privateRequest.tags
-  )
-  privateRequests: InstitutionalRequestEntity[];
+  @ManyToMany(() => PrivateRequestEntity, (privateRequest) => privateRequest.tags)
+  privateRequests?: PrivateRequestEntity[];
+
+  @ManyToMany(() => InstitutionalMatchingProfileEntity, (institutionalMatchingProfile) => institutionalMatchingProfile.tags)
+  institutionalMatchingProfiles?: InstitutionalMatchingProfileEntity[];
+
+  @ManyToMany(() => PrivateMatchingProfileEntity, (privateMatchingProfile) => privateMatchingProfile.tags)
+  privateMatchingProfiles?: PrivateMatchingProfileEntity[];
 }

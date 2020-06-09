@@ -1,13 +1,5 @@
 import { Column, JoinColumn, ManyToOne, OneToOne } from 'typeorm';
-import {
-  IsDate,
-  IsInt,
-  IsNotEmpty,
-  IsOptional,
-  IsPositive,
-  IsString,
-  IsUUID
-} from 'class-validator';
+import { IsDate, IsInt, IsNotEmpty, IsOptional, IsPositive, IsString, IsUUID } from 'class-validator';
 import { BaseEntity } from '../base.entity';
 import { InstitutionEntity } from '../institution/institution.entity';
 import { InstitutionMemberEntity } from '../institutionMember/institutionMember.entity';
@@ -24,13 +16,13 @@ export abstract class InstitutionalItemEntity extends BaseEntity {
   @IsString()
   description: string;
 
-  @Column()
+  @Column('int')
   @IsOptional()
   @IsInt()
   @IsPositive()
   capacity?: number;
 
-  @Column()
+  @Column('int')
   @IsOptional()
   @IsInt()
   @IsPositive()
@@ -72,6 +64,11 @@ export abstract class InstitutionalItemEntity extends BaseEntity {
   contactPersonId?: string;
 
   @Column('uuid')
+  @IsNotEmpty()
+  @IsUUID('4')
+  rewardDefinitionId: string;
+
+  @Column('uuid')
   @IsOptional()
   @IsUUID('4')
   addressId?: string;
@@ -79,13 +76,6 @@ export abstract class InstitutionalItemEntity extends BaseEntity {
   /*
    * Relations
    * */
-  @ManyToOne(
-    () => InstitutionEntity,
-    (institution) => institution.institutionalOffers
-  )
-  @JoinColumn()
-  institution: InstitutionEntity;
-
   @OneToOne(() => AddressEntity)
   @JoinColumn()
   address?: AddressEntity;

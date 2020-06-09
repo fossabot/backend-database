@@ -11,27 +11,15 @@ export class InstitutionMemberEntity {
   /*
    * Relations
    * */
-  @OneToMany(
-    () => InstitutionalOfferEntity,
-    (institutionalOffer) => institutionalOffer.author
-  )
+  @OneToMany(() => InstitutionalOfferEntity, (institutionalOffer) => institutionalOffer.author)
   institutionalOffersAsAuthor: InstitutionalOfferEntity[];
 
-  @OneToMany(
-    () => InstitutionalOfferEntity,
-    (institutionalOffer) => institutionalOffer.author
-  )
+  @OneToMany(() => InstitutionalOfferEntity, (institutionalOffer) => institutionalOffer.author)
   institutionalOffersAsContactPerson: InstitutionalOfferEntity[];
 
-  @OneToMany(
-    () => InstitutionalRequestEntity,
-    (institutionalRequest) => institutionalRequest.author
-  )
+  @OneToMany(() => InstitutionalRequestEntity, (institutionalRequest) => institutionalRequest.author)
   institutionalRequestsAsAuthor: InstitutionalRequestEntity[];
 
-  @OneToMany(
-    () => InstitutionalRequestEntity,
-    (institutionalRequest) => institutionalRequest.author
-  )
+  @OneToMany(() => InstitutionalRequestEntity, (institutionalRequest) => institutionalRequest.author)
   institutionalRequestsAsContactPerson: InstitutionalRequestEntity[];
 }

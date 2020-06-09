@@ -1,13 +1,5 @@
 import { Column, JoinColumn, OneToOne } from 'typeorm';
-import {
-  IsDate,
-  IsInt,
-  IsNotEmpty,
-  IsOptional,
-  IsPositive,
-  IsString,
-  IsUUID
-} from 'class-validator';
+import { IsDate, IsInt, IsNotEmpty, IsOptional, IsPositive, IsString, IsUUID } from 'class-validator';
 import { BaseEntity } from '../base.entity';
 import { AddressEntity } from '../address/address.entity';
 
@@ -22,13 +14,13 @@ export abstract class PrivateItemEntity extends BaseEntity {
   @IsString()
   description: string;
 
-  @Column()
+  @Column('int')
   @IsOptional()
   @IsInt()
   @IsPositive()
   capacity?: number;
 
-  @Column()
+  @Column('int')
   @IsOptional()
   @IsInt()
   @IsPositive()
@@ -60,6 +52,11 @@ export abstract class PrivateItemEntity extends BaseEntity {
   userId: string;
 
   @Column('uuid')
+  @IsNotEmpty()
+  @IsUUID('4')
+  rewardDefinitionId: string;
+
+  @Column('uuid')
   @IsOptional()
   @IsUUID('4')
   addressId?: string;
@@ -67,10 +64,6 @@ export abstract class PrivateItemEntity extends BaseEntity {
   /*
    * Relations
    * */
-  // @ManyToOne(() => UserEntity, user => user.institutionalOffersAsAuthor)
-  // @JoinColumn()
-  // user: UserEntity;
-
   @OneToOne(() => AddressEntity)
   @JoinColumn()
   address?: AddressEntity;

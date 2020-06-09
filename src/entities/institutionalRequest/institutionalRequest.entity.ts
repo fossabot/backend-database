@@ -3,13 +3,15 @@ import { InstitutionalItemEntity } from '../institutionalItem/institutionalItem.
 import { TagEntity } from '../tag/tag.entity';
 import { CategoryEntity } from '../category/category.entity';
 import { InstitutionMemberEntity } from '../institutionMember/institutionMember.entity';
+import { InstitutionEntity } from '../institution/institution.entity';
+import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
 
 @Entity('institutionalRequests')
 export class InstitutionalRequestEntity extends InstitutionalItemEntity {
-  @ManyToMany(
-    () => CategoryEntity,
-    (category) => category.institutionalRequests
-  )
+  /*
+   * Relations
+   * */
+  @ManyToMany(() => CategoryEntity, (category) => category.institutionalRequests)
   @JoinTable({
     name: 'institutionalRequests_categories',
     joinColumn: {
@@ -37,17 +39,19 @@ export class InstitutionalRequestEntity extends InstitutionalItemEntity {
   })
   tags?: TagEntity[];
 
-  @ManyToOne(
-    () => InstitutionMemberEntity,
-    (author) => author.institutionalRequestsAsAuthor
-  )
+  @ManyToOne(() => InstitutionEntity, (institution) => institution.institutionalRequests)
+  @JoinColumn()
+  institution: InstitutionEntity;
+
+  @ManyToOne(() => InstitutionMemberEntity, (author) => author.institutionalRequestsAsAuthor)
   @JoinColumn()
   author: InstitutionMemberEntity;
 
-  @ManyToOne(
-    () => InstitutionMemberEntity,
-    (contactPerson) => contactPerson.institutionalRequestsAsContactPerson
-  )
+  @ManyToOne(() => InstitutionMemberEntity, (contactPerson) => contactPerson.institutionalRequestsAsContactPerson)
   @JoinColumn()
   contactPerson?: InstitutionMemberEntity;
+
+  @ManyToOne(() => RewardDefinitionEntity, (rewardDefinition) => rewardDefinition.institutionalRequests)
+  @JoinColumn()
+  rewardDefinition: RewardDefinitionEntity;
 }

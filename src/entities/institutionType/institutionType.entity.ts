@@ -18,9 +18,6 @@ export class InstitutionTypeEntity extends BaseEntity {
   /*
    * Relations
    * */
-  @OneToMany(
-    () => InstitutionEntity,
-    (institution) => institution.institutionType
-  )
+  @OneToMany(() => InstitutionEntity, (institution) => institution.institutionType)
   institutions: InstitutionEntity[];
 }

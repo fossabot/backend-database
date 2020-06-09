@@ -1,11 +1,15 @@
 import { Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne } from 'typeorm';
 import { TagEntity } from '../tag/tag.entity';
 import { CategoryEntity } from '../category/category.entity';
-import { PrivateItemEntity } from '../privateItem/institutionalItem.entity';
+import { PrivateItemEntity } from '../privateItem/privateItem.entity';
 import { UserEntity } from '../user/user.entity';
+import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
 
 @Entity('privateOffers')
 export class PrivateOfferEntity extends PrivateItemEntity {
+  /*
+   * Relations
+   * */
   @ManyToMany(() => CategoryEntity, (category) => category.privateOffers)
   @JoinTable({
     name: 'privateOffers_categories',
@@ -37,4 +41,8 @@ export class PrivateOfferEntity extends PrivateItemEntity {
   @ManyToOne(() => UserEntity, (user) => user.offers)
   @JoinColumn()
   user: UserEntity;
+
+  @ManyToOne(() => RewardDefinitionEntity, (rewardDefinition) => rewardDefinition.privateOffers)
+  @JoinColumn()
+  rewardDefinition: RewardDefinitionEntity;
 }

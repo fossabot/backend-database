@@ -1,11 +1,4 @@
-import {
-  Column,
-  Entity,
-  JoinColumn,
-  ManyToOne,
-  OneToMany,
-  OneToOne
-} from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne } from 'typeorm';
 import { BaseEntity } from '../base.entity';
 import { IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator';
 import { InstitutionEntity } from '../institution/institution.entity';
