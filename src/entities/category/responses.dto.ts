@@ -5,10 +5,6 @@ import { Type } from 'class-transformer';
 import { BaseResponseDto } from '../baseResponse.dto';
 
 export class GetCategoryDto extends BaseResponseDto {
-  @ApiProperty({ format: 'uuid' })
-  @IsString()
-  id: string;
-
   @ApiProperty({ type: 'string' })
   @IsString()
   name: string;
