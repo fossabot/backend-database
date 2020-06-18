@@ -33,6 +33,6 @@ export { ItemType } from './enums/ItemType.enum';
  * DTOs
  */
 
-export {CreateCategoryDto} from './entities/category/requests.dto';
+export { CreateCategoryDto } from './entities/category/requests.dto';
 export { GetCategoryDto } from './entities/category/responses.dto';
 export { GetCategoryWithRelationsDto } from './entities/category/responses.dto';

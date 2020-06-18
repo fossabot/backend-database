@@ -26,9 +26,9 @@ exports.InstitutionalMatchingProfileEntity = void 0;
 var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
-var institution_entity_1 = require("../institution/institution.entity");
-var category_entity_1 = require("../category/category.entity");
-var tag_entity_1 = require("../tag/tag.entity");
+var __1 = require("../..");
+var __2 = require("../..");
+var __3 = require("../..");
 var InstitutionalMatchingProfileEntity = /** @class */ (function (_super) {
     __extends(InstitutionalMatchingProfileEntity, _super);
     function InstitutionalMatchingProfileEntity() {
@@ -57,11 +57,11 @@ var InstitutionalMatchingProfileEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], InstitutionalMatchingProfileEntity.prototype, "institutionId", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return institution_entity_1.InstitutionEntity; }, function (institution) { return institution.matchingProfile; }),
-        __metadata("design:type", institution_entity_1.InstitutionEntity)
+        typeorm_1.OneToOne(function () { return __1.InstitutionEntity; }, function (institution) { return institution.matchingProfile; }),
+        __metadata("design:type", __1.InstitutionEntity)
     ], InstitutionalMatchingProfileEntity.prototype, "institution", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return category_entity_1.CategoryEntity; }, function (category) { return category.institutionalMatchingProfiles; }),
+        typeorm_1.ManyToMany(function () { return __2.CategoryEntity; }, function (category) { return category.institutionalMatchingProfiles; }),
         typeorm_1.JoinTable({
             name: 'institutionalMatchingProfiles_categories',
             joinColumn: {
@@ -76,7 +76,7 @@ var InstitutionalMatchingProfileEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], InstitutionalMatchingProfileEntity.prototype, "categories", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return tag_entity_1.TagEntity; }, function (tag) { return tag.institutionalMatchingProfiles; }),
+        typeorm_1.ManyToMany(function () { return __3.TagEntity; }, function (tag) { return tag.institutionalMatchingProfiles; }),
         typeorm_1.JoinTable({
             name: 'institutionalMatchingProfiles_tags',
             joinColumn: {

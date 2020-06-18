@@ -1,5 +1,5 @@
 import { BaseEntity } from '../base.entity';
-import { AddressEntity } from '../address/address.entity';
+import { AddressEntity } from '../..';
 export declare abstract class PrivateItemEntity extends BaseEntity {
     title: string;
     description: string;

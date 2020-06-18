@@ -1,8 +1,8 @@
-import { TagEntity } from '../tag/tag.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { PrivateItemEntity } from '../privateItem/privateItem.entity';
-import { UserEntity } from '../user/user.entity';
-import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
+import { TagEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { PrivateItemEntity } from '../..';
+import { UserEntity } from '../..';
+import { RewardDefinitionEntity } from '../..';
 export declare class PrivateOfferEntity extends PrivateItemEntity {
     categories: CategoryEntity[];
     tags?: TagEntity[];

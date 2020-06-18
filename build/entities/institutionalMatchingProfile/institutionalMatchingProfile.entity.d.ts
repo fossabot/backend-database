@@ -1,7 +1,7 @@
 import { BaseEntity } from '../base.entity';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { TagEntity } from '../tag/tag.entity';
+import { InstitutionEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { TagEntity } from '../..';
 export declare class InstitutionalMatchingProfileEntity extends BaseEntity {
     radius?: number;
     additionalSkills?: string[];

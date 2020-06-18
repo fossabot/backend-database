@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.dto = exports.CreateInstitutionDto = void 0;
 var class_validator_1 = require("class-validator");
 var swagger_1 = require("@nestjs/swagger");
-var responses_dto_1 = require("../category/responses.dto");
+var __1 = require("../..");
 var class_transformer_1 = require("class-transformer");
 var CreateInstitutionDto = /** @class */ (function () {
     function CreateInstitutionDto() {
@@ -30,10 +30,10 @@ var CreateInstitutionDto = /** @class */ (function () {
         __metadata("design:type", String)
     ], CreateInstitutionDto.prototype, "description", void 0);
     __decorate([
-        swagger_1.ApiProperty({ type: responses_dto_1.GetCategoryDto }),
+        swagger_1.ApiProperty({ type: __1.GetCategoryDto }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsArray(),
-        class_transformer_1.Type(function () { return responses_dto_1.GetCategoryDto; }),
+        class_transformer_1.Type(function () { return __1.GetCategoryDto; }),
         __metadata("design:type", Array)
     ], CreateInstitutionDto.prototype, "categories", void 0);
     return CreateInstitutionDto;

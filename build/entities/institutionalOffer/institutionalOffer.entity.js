@@ -24,19 +24,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InstitutionalOfferEntity = void 0;
 var typeorm_1 = require("typeorm");
-var institutionalItem_entity_1 = require("../institutionalItem/institutionalItem.entity");
-var tag_entity_1 = require("../tag/tag.entity");
-var category_entity_1 = require("../category/category.entity");
-var institutionMember_entity_1 = require("../institutionMember/institutionMember.entity");
-var institution_entity_1 = require("../institution/institution.entity");
-var rewardDefinition_entity_1 = require("../rewardDefinition/rewardDefinition.entity");
+var __1 = require("../..");
+var __2 = require("../..");
+var __3 = require("../..");
+var __4 = require("../..");
+var __5 = require("../..");
+var __6 = require("../..");
 var InstitutionalOfferEntity = /** @class */ (function (_super) {
     __extends(InstitutionalOfferEntity, _super);
     function InstitutionalOfferEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.ManyToMany(function () { return category_entity_1.CategoryEntity; }, function (category) { return category.institutionalOffers; }),
+        typeorm_1.ManyToMany(function () { return __3.CategoryEntity; }, function (category) { return category.institutionalOffers; }),
         typeorm_1.JoinTable({
             name: 'institutionalOffers_categories',
             joinColumn: {
@@ -51,7 +51,7 @@ var InstitutionalOfferEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], InstitutionalOfferEntity.prototype, "categories", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return tag_entity_1.TagEntity; }, function (tag) { return tag.institutionalOffers; }),
+        typeorm_1.ManyToMany(function () { return __2.TagEntity; }, function (tag) { return tag.institutionalOffers; }),
         typeorm_1.JoinTable({
             name: 'institutionalOffers_tags',
             joinColumn: {
@@ -66,28 +66,28 @@ var InstitutionalOfferEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], InstitutionalOfferEntity.prototype, "tags", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return institution_entity_1.InstitutionEntity; }, function (institution) { return institution.institutionalOffers; }),
+        typeorm_1.ManyToOne(function () { return __5.InstitutionEntity; }, function (institution) { return institution.institutionalOffers; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", institution_entity_1.InstitutionEntity)
+        __metadata("design:type", __5.InstitutionEntity)
     ], InstitutionalOfferEntity.prototype, "institution", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return institutionMember_entity_1.InstitutionMemberEntity; }, function (author) { return author.institutionalOffersAsAuthor; }),
+        typeorm_1.ManyToOne(function () { return __4.InstitutionMemberEntity; }, function (author) { return author.institutionalOffersAsAuthor; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", institutionMember_entity_1.InstitutionMemberEntity)
+        __metadata("design:type", __4.InstitutionMemberEntity)
     ], InstitutionalOfferEntity.prototype, "author", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return institutionMember_entity_1.InstitutionMemberEntity; }, function (contactPerson) { return contactPerson.institutionalOffersAsContactPerson; }),
+        typeorm_1.ManyToOne(function () { return __4.InstitutionMemberEntity; }, function (contactPerson) { return contactPerson.institutionalOffersAsContactPerson; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", institutionMember_entity_1.InstitutionMemberEntity)
+        __metadata("design:type", __4.InstitutionMemberEntity)
     ], InstitutionalOfferEntity.prototype, "contactPerson", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return rewardDefinition_entity_1.RewardDefinitionEntity; }, function (rewardDefinition) { return rewardDefinition.institutionalOffers; }),
+        typeorm_1.ManyToOne(function () { return __6.RewardDefinitionEntity; }, function (rewardDefinition) { return rewardDefinition.institutionalOffers; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", rewardDefinition_entity_1.RewardDefinitionEntity)
+        __metadata("design:type", __6.RewardDefinitionEntity)
     ], InstitutionalOfferEntity.prototype, "rewardDefinition", void 0);
     InstitutionalOfferEntity = __decorate([
         typeorm_1.Entity('institutionalOffers')
     ], InstitutionalOfferEntity);
     return InstitutionalOfferEntity;
-}(institutionalItem_entity_1.InstitutionalItemEntity));
+}(__1.InstitutionalItemEntity));
 exports.InstitutionalOfferEntity = InstitutionalOfferEntity;

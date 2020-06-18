@@ -26,9 +26,9 @@ exports.PrivateMatchingProfileEntity = void 0;
 var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
-var user_entity_1 = require("../user/user.entity");
-var category_entity_1 = require("../category/category.entity");
-var tag_entity_1 = require("../tag/tag.entity");
+var __1 = require("../..");
+var __2 = require("../..");
+var __3 = require("../..");
 var PrivateMatchingProfileEntity = /** @class */ (function (_super) {
     __extends(PrivateMatchingProfileEntity, _super);
     function PrivateMatchingProfileEntity() {
@@ -58,11 +58,11 @@ var PrivateMatchingProfileEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], PrivateMatchingProfileEntity.prototype, "userId", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return user_entity_1.UserEntity; }, function (user) { return user.matchingProfile; }),
-        __metadata("design:type", user_entity_1.UserEntity)
+        typeorm_1.OneToOne(function () { return __1.UserEntity; }, function (user) { return user.matchingProfile; }),
+        __metadata("design:type", __1.UserEntity)
     ], PrivateMatchingProfileEntity.prototype, "user", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return category_entity_1.CategoryEntity; }, function (category) { return category.privateMatchingProfiles; }),
+        typeorm_1.ManyToMany(function () { return __2.CategoryEntity; }, function (category) { return category.privateMatchingProfiles; }),
         typeorm_1.JoinTable({
             name: 'privateMatchingProfiles_categories',
             joinColumn: {
@@ -77,7 +77,7 @@ var PrivateMatchingProfileEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], PrivateMatchingProfileEntity.prototype, "categories", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return tag_entity_1.TagEntity; }, function (tag) { return tag.privateMatchingProfiles; }),
+        typeorm_1.ManyToMany(function () { return __3.TagEntity; }, function (tag) { return tag.privateMatchingProfiles; }),
         typeorm_1.JoinTable({
             name: 'privateMatchingProfiles_tags',
             joinColumn: {

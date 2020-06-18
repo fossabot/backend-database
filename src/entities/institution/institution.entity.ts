@@ -1,4 +1,4 @@
-import { IsArray, IsEmail, IsNotEmpty, IsNumberString, IsOptional, IsString, IsUUID} from 'class-validator';
+import { IsArray, IsEmail, IsNotEmpty, IsNumberString, IsOptional, IsString, IsUUID } from 'class-validator';
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne } from 'typeorm';
 import { CategoryEntity } from '../..';
 import { BaseEntity } from '../base.entity';

@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InstitutionAdminEntity = void 0;
 var typeorm_1 = require("typeorm");
-var institution_entity_1 = require("../institution/institution.entity");
+var __1 = require("../..");
 var InstitutionAdminEntity = /** @class */ (function () {
     function InstitutionAdminEntity() {
     }
@@ -21,8 +21,8 @@ var InstitutionAdminEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], InstitutionAdminEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return institution_entity_1.InstitutionEntity; }, function (institution) { return institution.institutionAdmin; }),
-        __metadata("design:type", institution_entity_1.InstitutionEntity)
+        typeorm_1.OneToOne(function () { return __1.InstitutionEntity; }, function (institution) { return institution.institutionAdmin; }),
+        __metadata("design:type", __1.InstitutionEntity)
     ], InstitutionAdminEntity.prototype, "institution", void 0);
     InstitutionAdminEntity = __decorate([
         typeorm_1.Entity('institutionAdmins')

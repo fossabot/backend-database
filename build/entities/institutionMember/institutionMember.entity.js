@@ -11,8 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InstitutionMemberEntity = void 0;
 var typeorm_1 = require("typeorm");
-var institutionalOffer_entity_1 = require("../institutionalOffer/institutionalOffer.entity");
-var institutionalRequest_entity_1 = require("../institutionalRequest/institutionalRequest.entity");
+var __1 = require("../..");
+var __2 = require("../..");
 var InstitutionMemberEntity = /** @class */ (function () {
     function InstitutionMemberEntity() {
     }
@@ -22,19 +22,19 @@ var InstitutionMemberEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], InstitutionMemberEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return institutionalOffer_entity_1.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.author; }),
+        typeorm_1.OneToMany(function () { return __1.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.author; }),
         __metadata("design:type", Array)
     ], InstitutionMemberEntity.prototype, "institutionalOffersAsAuthor", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return institutionalOffer_entity_1.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.author; }),
+        typeorm_1.OneToMany(function () { return __1.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.author; }),
         __metadata("design:type", Array)
     ], InstitutionMemberEntity.prototype, "institutionalOffersAsContactPerson", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return institutionalRequest_entity_1.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.author; }),
+        typeorm_1.OneToMany(function () { return __2.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.author; }),
         __metadata("design:type", Array)
     ], InstitutionMemberEntity.prototype, "institutionalRequestsAsAuthor", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return institutionalRequest_entity_1.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.author; }),
+        typeorm_1.OneToMany(function () { return __2.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.author; }),
         __metadata("design:type", Array)
     ], InstitutionMemberEntity.prototype, "institutionalRequestsAsContactPerson", void 0);
     InstitutionMemberEntity = __decorate([

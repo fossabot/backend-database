@@ -1,4 +1,4 @@
-import { GetCategoryDto } from '../category/responses.dto';
+import { GetCategoryDto } from '../..';
 export declare class CreateInstitutionDto {
     name: string;
     description: string;

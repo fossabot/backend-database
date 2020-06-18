@@ -26,7 +26,7 @@ exports.serialize = exports.GetInstitutionDto = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
 var class_transformer_1 = require("class-transformer");
-var responses_dto_1 = require("../category/responses.dto");
+var __1 = require("../..");
 var baseResponse_dto_1 = require("../baseResponse.dto");
 var GetInstitutionDto = /** @class */ (function (_super) {
     __extends(GetInstitutionDto, _super);
@@ -49,9 +49,9 @@ var GetInstitutionDto = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], GetInstitutionDto.prototype, "description", void 0);
     __decorate([
-        swagger_1.ApiProperty({ type: responses_dto_1.GetCategoryDto }),
+        swagger_1.ApiProperty({ type: __1.GetCategoryDto }),
         class_validator_1.IsArray(),
-        class_transformer_1.Type(function () { return responses_dto_1.GetCategoryDto; }),
+        class_transformer_1.Type(function () { return __1.GetCategoryDto; }),
         __metadata("design:type", Array)
     ], GetInstitutionDto.prototype, "categories", void 0);
     return GetInstitutionDto;

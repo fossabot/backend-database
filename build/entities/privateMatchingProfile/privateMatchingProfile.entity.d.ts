@@ -1,7 +1,7 @@
 import { BaseEntity } from '../base.entity';
-import { UserEntity } from '../user/user.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { TagEntity } from '../tag/tag.entity';
+import { UserEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { TagEntity } from '../..';
 export declare class PrivateMatchingProfileEntity extends BaseEntity {
     radius: number;
     additionalSkills?: string[];

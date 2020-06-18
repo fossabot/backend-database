@@ -25,7 +25,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.serialize = exports.GetCategoryWithRelationsDto = exports.GetCategoryDto = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var institution_entity_1 = require("../institution/institution.entity");
+var __1 = require("../..");
 var class_transformer_1 = require("class-transformer");
 var baseResponse_dto_1 = require("../baseResponse.dto");
 var GetCategoryDto = /** @class */ (function (_super) {
@@ -52,9 +52,9 @@ var GetCategoryWithRelationsDto = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        swagger_1.ApiProperty({ type: institution_entity_1.InstitutionEntity, required: false, isArray: true }),
+        swagger_1.ApiProperty({ type: __1.InstitutionEntity, required: false, isArray: true }),
         class_validator_1.IsOptional(),
-        class_transformer_1.Type(function () { return institution_entity_1.InstitutionEntity; }),
+        class_transformer_1.Type(function () { return __1.InstitutionEntity; }),
         __metadata("design:type", Array)
     ], GetCategoryWithRelationsDto.prototype, "institutions", void 0);
     return GetCategoryWithRelationsDto;

@@ -1,9 +1,9 @@
-import { InstitutionalItemEntity } from '../institutionalItem/institutionalItem.entity';
-import { TagEntity } from '../tag/tag.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { InstitutionMemberEntity } from '../institutionMember/institutionMember.entity';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
+import { InstitutionalItemEntity } from '../..';
+import { TagEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { InstitutionMemberEntity } from '../..';
+import { InstitutionEntity } from '../..';
+import { RewardDefinitionEntity } from '../..';
 export declare class InstitutionalRequestEntity extends InstitutionalItemEntity {
     categories: CategoryEntity[];
     tags?: TagEntity[];

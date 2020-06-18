@@ -1,5 +1,5 @@
-import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOffer.entity';
-import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
+import { InstitutionalOfferEntity } from '../..';
+import { InstitutionalRequestEntity } from '../..';
 export declare class InstitutionMemberEntity {
     id: string;
     institutionalOffersAsAuthor: InstitutionalOfferEntity[];

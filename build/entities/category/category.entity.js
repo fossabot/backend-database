@@ -25,15 +25,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CategoryEntity = void 0;
 var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
-var institution_entity_1 = require("../institution/institution.entity");
+var __1 = require("../..");
 var base_entity_1 = require("../base.entity");
-var institutionalOffer_entity_1 = require("../institutionalOffer/institutionalOffer.entity");
-var institutionalRequest_entity_1 = require("../institutionalRequest/institutionalRequest.entity");
-var privateOffer_entity_1 = require("../privateOffer/privateOffer.entity");
-var privateRequest_entity_1 = require("../privateRequest/privateRequest.entity");
-var rewardDefinition_entity_1 = require("../rewardDefinition/rewardDefinition.entity");
-var institutionalMatchingProfile_entity_1 = require("../institutionalMatchingProfile/institutionalMatchingProfile.entity");
-var privateMatchingProfile_entity_1 = require("../privateMatchingProfile/privateMatchingProfile.entity");
+var __2 = require("../..");
+var __3 = require("../..");
+var __4 = require("../..");
+var __5 = require("../..");
+var __6 = require("../..");
+var __7 = require("../..");
+var __8 = require("../..");
 var CategoryEntity = /** @class */ (function (_super) {
     __extends(CategoryEntity, _super);
     function CategoryEntity() {
@@ -52,35 +52,35 @@ var CategoryEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], CategoryEntity.prototype, "description", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return institution_entity_1.InstitutionEntity; }, function (institution) { return institution.categories; }),
+        typeorm_1.ManyToMany(function () { return __1.InstitutionEntity; }, function (institution) { return institution.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "institutions", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return institutionalOffer_entity_1.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.categories; }),
+        typeorm_1.ManyToMany(function () { return __2.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "institutionalOffers", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return institutionalRequest_entity_1.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.categories; }),
+        typeorm_1.ManyToMany(function () { return __3.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "institutionalRequests", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return privateOffer_entity_1.PrivateOfferEntity; }, function (privateOffer) { return privateOffer.categories; }),
+        typeorm_1.ManyToMany(function () { return __4.PrivateOfferEntity; }, function (privateOffer) { return privateOffer.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "privateOffers", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return privateRequest_entity_1.PrivateRequestEntity; }, function (privateRequest) { return privateRequest.categories; }),
+        typeorm_1.ManyToMany(function () { return __5.PrivateRequestEntity; }, function (privateRequest) { return privateRequest.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "privateRequests", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return rewardDefinition_entity_1.RewardDefinitionEntity; }, function (rewardDefinition) { return rewardDefinition.categories; }),
+        typeorm_1.ManyToMany(function () { return __6.RewardDefinitionEntity; }, function (rewardDefinition) { return rewardDefinition.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "rewardDefinitions", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return institutionalMatchingProfile_entity_1.InstitutionalMatchingProfileEntity; }, function (institutionalMatchingProfile) { return institutionalMatchingProfile.categories; }),
+        typeorm_1.ManyToMany(function () { return __7.InstitutionalMatchingProfileEntity; }, function (institutionalMatchingProfile) { return institutionalMatchingProfile.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "institutionalMatchingProfiles", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return privateMatchingProfile_entity_1.PrivateMatchingProfileEntity; }, function (privateMatchingProfile) { return privateMatchingProfile.categories; }),
+        typeorm_1.ManyToMany(function () { return __8.PrivateMatchingProfileEntity; }, function (privateMatchingProfile) { return privateMatchingProfile.categories; }),
         __metadata("design:type", Array)
     ], CategoryEntity.prototype, "privateMatchingProfiles", void 0);
     CategoryEntity = __decorate([

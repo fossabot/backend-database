@@ -24,18 +24,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PrivateRequestEntity = void 0;
 var typeorm_1 = require("typeorm");
-var tag_entity_1 = require("../tag/tag.entity");
-var category_entity_1 = require("../category/category.entity");
-var privateItem_entity_1 = require("../privateItem/privateItem.entity");
-var user_entity_1 = require("../user/user.entity");
-var rewardDefinition_entity_1 = require("../rewardDefinition/rewardDefinition.entity");
+var __1 = require("../..");
+var __2 = require("../..");
+var __3 = require("../..");
+var __4 = require("../..");
+var __5 = require("../..");
 var PrivateRequestEntity = /** @class */ (function (_super) {
     __extends(PrivateRequestEntity, _super);
     function PrivateRequestEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.ManyToMany(function () { return category_entity_1.CategoryEntity; }, function (category) { return category.privateRequests; }),
+        typeorm_1.ManyToMany(function () { return __2.CategoryEntity; }, function (category) { return category.privateRequests; }),
         typeorm_1.JoinTable({
             name: 'privateRequests_categories',
             joinColumn: {
@@ -50,7 +50,7 @@ var PrivateRequestEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], PrivateRequestEntity.prototype, "categories", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return tag_entity_1.TagEntity; }, function (tag) { return tag.privateRequests; }),
+        typeorm_1.ManyToMany(function () { return __1.TagEntity; }, function (tag) { return tag.privateRequests; }),
         typeorm_1.JoinTable({
             name: 'privateRequests_tags',
             joinColumn: {
@@ -65,18 +65,18 @@ var PrivateRequestEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], PrivateRequestEntity.prototype, "tags", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return user_entity_1.UserEntity; }, function (user) { return user.requests; }),
+        typeorm_1.ManyToOne(function () { return __4.UserEntity; }, function (user) { return user.requests; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", user_entity_1.UserEntity)
+        __metadata("design:type", __4.UserEntity)
     ], PrivateRequestEntity.prototype, "user", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return rewardDefinition_entity_1.RewardDefinitionEntity; }, function (rewardDefinition) { return rewardDefinition.privateRequests; }),
+        typeorm_1.ManyToOne(function () { return __5.RewardDefinitionEntity; }, function (rewardDefinition) { return rewardDefinition.privateRequests; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", rewardDefinition_entity_1.RewardDefinitionEntity)
+        __metadata("design:type", __5.RewardDefinitionEntity)
     ], PrivateRequestEntity.prototype, "rewardDefinition", void 0);
     PrivateRequestEntity = __decorate([
         typeorm_1.Entity('privateRequests')
     ], PrivateRequestEntity);
     return PrivateRequestEntity;
-}(privateItem_entity_1.PrivateItemEntity));
+}(__3.PrivateItemEntity));
 exports.PrivateRequestEntity = PrivateRequestEntity;

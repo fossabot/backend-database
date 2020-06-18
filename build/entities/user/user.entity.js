@@ -11,10 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserEntity = void 0;
 var typeorm_1 = require("typeorm");
-var address_entity_1 = require("../address/address.entity");
+var __1 = require("../..");
 var class_validator_1 = require("class-validator");
-var privateOffer_entity_1 = require("../privateOffer/privateOffer.entity");
-var privateMatchingProfile_entity_1 = require("../privateMatchingProfile/privateMatchingProfile.entity");
+var __2 = require("../..");
+var __3 = require("../..");
 var UserEntity = /** @class */ (function () {
     function UserEntity() {
     }
@@ -30,21 +30,21 @@ var UserEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], UserEntity.prototype, "addressId", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return address_entity_1.AddressEntity; }),
+        typeorm_1.OneToOne(function () { return __1.AddressEntity; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", address_entity_1.AddressEntity)
+        __metadata("design:type", __1.AddressEntity)
     ], UserEntity.prototype, "address", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return privateMatchingProfile_entity_1.PrivateMatchingProfileEntity; }, function (matchingProfile) { return matchingProfile.user; }),
+        typeorm_1.OneToOne(function () { return __3.PrivateMatchingProfileEntity; }, function (matchingProfile) { return matchingProfile.user; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", privateMatchingProfile_entity_1.PrivateMatchingProfileEntity)
+        __metadata("design:type", __3.PrivateMatchingProfileEntity)
     ], UserEntity.prototype, "matchingProfile", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return privateOffer_entity_1.PrivateOfferEntity; }, function (offer) { return offer.user; }),
+        typeorm_1.OneToMany(function () { return __2.PrivateOfferEntity; }, function (offer) { return offer.user; }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "offers", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return privateOffer_entity_1.PrivateOfferEntity; }, function (request) { return request.user; }),
+        typeorm_1.OneToMany(function () { return __2.PrivateOfferEntity; }, function (request) { return request.user; }),
         __metadata("design:type", Array)
     ], UserEntity.prototype, "requests", void 0);
     UserEntity = __decorate([

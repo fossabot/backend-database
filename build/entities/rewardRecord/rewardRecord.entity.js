@@ -26,9 +26,9 @@ exports.RewardRecordEntity = void 0;
 var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
-var ClientType_enum_1 = require("../../enums/ClientType.enum");
-var institution_entity_1 = require("../institution/institution.entity");
-var matching_entity_1 = require("../matching/matching.entity");
+var __1 = require("../..");
+var __2 = require("../..");
+var __3 = require("../..");
 var RewardRecordEntity = /** @class */ (function (_super) {
     __extends(RewardRecordEntity, _super);
     function RewardRecordEntity() {
@@ -48,9 +48,9 @@ var RewardRecordEntity = /** @class */ (function (_super) {
         __metadata("design:type", Boolean)
     ], RewardRecordEntity.prototype, "verified", void 0);
     __decorate([
-        typeorm_1.Column('enum', { enum: ClientType_enum_1.ClientType }),
+        typeorm_1.Column('enum', { enum: __1.ClientType }),
         class_validator_1.IsNotEmpty(),
-        class_validator_1.IsEnum(ClientType_enum_1.ClientType),
+        class_validator_1.IsEnum(__1.ClientType),
         __metadata("design:type", String)
     ], RewardRecordEntity.prototype, "receiverType", void 0);
     __decorate([
@@ -72,12 +72,12 @@ var RewardRecordEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], RewardRecordEntity.prototype, "matchingId", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return institution_entity_1.InstitutionEntity; }, function (institution) { return institution.verifiedRewardRecords; }),
-        __metadata("design:type", institution_entity_1.InstitutionEntity)
+        typeorm_1.ManyToOne(function () { return __2.InstitutionEntity; }, function (institution) { return institution.verifiedRewardRecords; }),
+        __metadata("design:type", __2.InstitutionEntity)
     ], RewardRecordEntity.prototype, "verifyingInstitution", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return matching_entity_1.MatchingEntity; }),
-        __metadata("design:type", matching_entity_1.MatchingEntity)
+        typeorm_1.OneToOne(function () { return __3.MatchingEntity; }),
+        __metadata("design:type", __3.MatchingEntity)
     ], RewardRecordEntity.prototype, "matching", void 0);
     RewardRecordEntity = __decorate([
         typeorm_1.Entity('rewardRecord')

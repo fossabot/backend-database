@@ -1,4 +1,4 @@
-import { InstitutionEntity } from '../institution/institution.entity';
+import { InstitutionEntity } from '../..';
 import { BaseResponseDto } from '../baseResponse.dto';
 export declare class GetCategoryDto extends BaseResponseDto {
     name: string;

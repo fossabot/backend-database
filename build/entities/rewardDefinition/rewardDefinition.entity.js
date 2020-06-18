@@ -26,11 +26,11 @@ exports.RewardDefinitionEntity = void 0;
 var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
-var category_entity_1 = require("../category/category.entity");
-var privateOffer_entity_1 = require("../privateOffer/privateOffer.entity");
-var privateRequest_entity_1 = require("../privateRequest/privateRequest.entity");
-var institutionalOffer_entity_1 = require("../institutionalOffer/institutionalOffer.entity");
-var institutionalRequest_entity_1 = require("../institutionalRequest/institutionalRequest.entity");
+var __1 = require("../..");
+var __2 = require("../..");
+var __3 = require("../..");
+var __4 = require("../..");
+var __5 = require("../..");
 var RewardDefinitionEntity = /** @class */ (function (_super) {
     __extends(RewardDefinitionEntity, _super);
     function RewardDefinitionEntity() {
@@ -62,7 +62,7 @@ var RewardDefinitionEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], RewardDefinitionEntity.prototype, "categoryId", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return category_entity_1.CategoryEntity; }, function (category) { return category.rewardDefinitions; }, {
+        typeorm_1.ManyToMany(function () { return __1.CategoryEntity; }, function (category) { return category.rewardDefinitions; }, {
             cascade: true
         }),
         typeorm_1.JoinTable({
@@ -79,19 +79,19 @@ var RewardDefinitionEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], RewardDefinitionEntity.prototype, "categories", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return institutionalOffer_entity_1.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.rewardDefinition; }),
+        typeorm_1.ManyToMany(function () { return __4.InstitutionalOfferEntity; }, function (institutionalOffer) { return institutionalOffer.rewardDefinition; }),
         __metadata("design:type", Array)
     ], RewardDefinitionEntity.prototype, "institutionalOffers", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return institutionalRequest_entity_1.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.rewardDefinition; }),
+        typeorm_1.ManyToMany(function () { return __5.InstitutionalRequestEntity; }, function (institutionalRequest) { return institutionalRequest.rewardDefinition; }),
         __metadata("design:type", Array)
     ], RewardDefinitionEntity.prototype, "institutionalRequests", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return privateOffer_entity_1.PrivateOfferEntity; }, function (privateOffer) { return privateOffer.rewardDefinition; }),
+        typeorm_1.ManyToMany(function () { return __2.PrivateOfferEntity; }, function (privateOffer) { return privateOffer.rewardDefinition; }),
         __metadata("design:type", Array)
     ], RewardDefinitionEntity.prototype, "privateOffers", void 0);
     __decorate([
-        typeorm_1.ManyToMany(function () { return privateRequest_entity_1.PrivateRequestEntity; }, function (privateRequest) { return privateRequest.rewardDefinition; }),
+        typeorm_1.ManyToMany(function () { return __3.PrivateRequestEntity; }, function (privateRequest) { return privateRequest.rewardDefinition; }),
         __metadata("design:type", Array)
     ], RewardDefinitionEntity.prototype, "privateRequests", void 0);
     RewardDefinitionEntity = __decorate([

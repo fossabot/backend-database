@@ -26,17 +26,17 @@ exports.MatchingEntity = void 0;
 var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
-var ClientType_enum_1 = require("../../enums/ClientType.enum");
-var ItemType_enum_1 = require("../../enums/ItemType.enum");
+var __1 = require("../..");
+var __2 = require("../..");
 var MatchingEntity = /** @class */ (function (_super) {
     __extends(MatchingEntity, _super);
     function MatchingEntity() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.Column('enum', { enum: ClientType_enum_1.ClientType }),
+        typeorm_1.Column('enum', { enum: __1.ClientType }),
         class_validator_1.IsNotEmpty(),
-        class_validator_1.IsEnum(ClientType_enum_1.ClientType),
+        class_validator_1.IsEnum(__1.ClientType),
         __metadata("design:type", String)
     ], MatchingEntity.prototype, "clientType", void 0);
     __decorate([
@@ -46,9 +46,9 @@ var MatchingEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], MatchingEntity.prototype, "clientId", void 0);
     __decorate([
-        typeorm_1.Column('enum', { enum: ItemType_enum_1.ItemType }),
+        typeorm_1.Column('enum', { enum: __2.ItemType }),
         class_validator_1.IsNotEmpty(),
-        class_validator_1.IsEnum(ItemType_enum_1.ItemType),
+        class_validator_1.IsEnum(__2.ItemType),
         __metadata("design:type", String)
     ], MatchingEntity.prototype, "itemType", void 0);
     __decorate([
@@ -58,9 +58,9 @@ var MatchingEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], MatchingEntity.prototype, "itemId", void 0);
     __decorate([
-        typeorm_1.Column('enum', { enum: ClientType_enum_1.ClientType }),
+        typeorm_1.Column('enum', { enum: __1.ClientType }),
         class_validator_1.IsNotEmpty(),
-        class_validator_1.IsEnum(ClientType_enum_1.ClientType),
+        class_validator_1.IsEnum(__1.ClientType),
         __metadata("design:type", String)
     ], MatchingEntity.prototype, "rewardReceiverType", void 0);
     __decorate([

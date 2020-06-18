@@ -1,12 +1,12 @@
-import { CategoryEntity } from '../category/category.entity';
+import { CategoryEntity } from '../..';
 import { BaseEntity } from '../base.entity';
-import { AddressEntity } from '../address/address.entity';
-import { InstitutionAdminEntity } from '../institutionAdmin/institutionAdmin.entity';
-import { InstitutionTypeEntity } from '../institutionType/institutionType.entity';
-import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOffer.entity';
-import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
-import { RewardRecordEntity } from '../rewardRecord/rewardRecord.entity';
-import { InstitutionalMatchingProfileEntity } from '../institutionalMatchingProfile/institutionalMatchingProfile.entity';
+import { AddressEntity } from '../..';
+import { InstitutionAdminEntity } from '../..';
+import { InstitutionTypeEntity } from '../..';
+import { InstitutionalOfferEntity } from '../..';
+import { InstitutionalRequestEntity } from '../..';
+import { RewardRecordEntity } from '../..';
+import { InstitutionalMatchingProfileEntity } from '../..';
 export declare class InstitutionEntity extends BaseEntity {
     name: string;
     description: string;

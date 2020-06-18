@@ -26,7 +26,7 @@ exports.InstitutionTypeEntity = void 0;
 var typeorm_1 = require("typeorm");
 var class_validator_1 = require("class-validator");
 var base_entity_1 = require("../base.entity");
-var institution_entity_1 = require("../institution/institution.entity");
+var __1 = require("../..");
 var InstitutionTypeEntity = /** @class */ (function (_super) {
     __extends(InstitutionTypeEntity, _super);
     function InstitutionTypeEntity() {
@@ -45,7 +45,7 @@ var InstitutionTypeEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], InstitutionTypeEntity.prototype, "description", void 0);
     __decorate([
-        typeorm_1.OneToMany(function () { return institution_entity_1.InstitutionEntity; }, function (institution) { return institution.institutionType; }),
+        typeorm_1.OneToMany(function () { return __1.InstitutionEntity; }, function (institution) { return institution.institutionType; }),
         __metadata("design:type", Array)
     ], InstitutionTypeEntity.prototype, "institutions", void 0);
     InstitutionTypeEntity = __decorate([

@@ -26,7 +26,7 @@ exports.InstitutionalItemEntity = void 0;
 var typeorm_1 = require("typeorm");
 var class_validator_1 = require("class-validator");
 var base_entity_1 = require("../base.entity");
-var address_entity_1 = require("../address/address.entity");
+var __1 = require("../..");
 var InstitutionalItemEntity = /** @class */ (function (_super) {
     __extends(InstitutionalItemEntity, _super);
     function InstitutionalItemEntity() {
@@ -113,9 +113,9 @@ var InstitutionalItemEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], InstitutionalItemEntity.prototype, "addressId", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return address_entity_1.AddressEntity; }),
+        typeorm_1.OneToOne(function () { return __1.AddressEntity; }),
         typeorm_1.JoinColumn(),
-        __metadata("design:type", address_entity_1.AddressEntity)
+        __metadata("design:type", __1.AddressEntity)
     ], InstitutionalItemEntity.prototype, "address", void 0);
     return InstitutionalItemEntity;
 }(base_entity_1.BaseEntity));

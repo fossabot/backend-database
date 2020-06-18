@@ -7,13 +7,13 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "compile-typescript": "tsc",
+    "typescript:compile": "tsc",
     "prettier:fix": "prettier --write \"src/**/*.ts\"",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
     "sync": "npm run typeorm schema:sync",
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n v0.0.1",
     "pre-commit": "npm run prettier:fix",
-    "commit": "git add . && npm run pre-commit && npx git-cz"
+    "commit": "npm run typescript:compile && git add . && npm run pre-commit && npx git-cz"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
