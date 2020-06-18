@@ -5,4 +5,4 @@ tmp/
 temp/
 #env
 ormconfig.json
-ormconfig.template.json
+#ormconfig.template.json

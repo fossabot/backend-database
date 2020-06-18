@@ -1,7 +1,7 @@
 import { IsBoolean, IsEnum, IsNotEmpty, IsNumber, IsPositive, IsUUID } from 'class-validator';
 import { Column, Entity, ManyToOne, OneToOne } from 'typeorm';
 import { BaseEntity } from '../base.entity';
-import { ClientType } from '../..';
+import { ClientType } from '../../enums/ClientType.enum';
 import { InstitutionEntity } from '../..';
 import { MatchingEntity } from '../..';
 

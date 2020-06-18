@@ -1,5 +1,5 @@
 import { BaseEntity } from '../base.entity';
-import { ClientType } from '../..';
+import { ClientType } from '../../enums/ClientType.enum';
 import { InstitutionEntity } from '../..';
 import { MatchingEntity } from '../..';
 export declare class RewardRecordEntity extends BaseEntity {
