@@ -1,9 +1,7 @@
-import { Column, JoinColumn, ManyToOne, OneToOne } from 'typeorm';
+import { Column, JoinColumn, OneToOne } from 'typeorm';
 import { IsDate, IsInt, IsNotEmpty, IsOptional, IsPositive, IsString, IsUUID } from 'class-validator';
 import { BaseEntity } from '../base.entity';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { InstitutionMemberEntity } from '../institutionMember/institutionMember.entity';
-import { AddressEntity } from '../address/address.entity';
+import { AddressEntity } from '../..';
 
 export abstract class InstitutionalItemEntity extends BaseEntity {
   @Column()

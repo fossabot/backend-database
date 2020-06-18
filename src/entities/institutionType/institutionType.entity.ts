@@ -1,7 +1,7 @@
 import { Column, Entity, OneToMany } from 'typeorm';
 import { IsNotEmpty, IsString } from 'class-validator';
 import { BaseEntity } from '../base.entity';
-import { InstitutionEntity } from '../institution/institution.entity';
+import { InstitutionEntity } from '../..';
 
 @Entity('institutionTypes')
 export class InstitutionTypeEntity extends BaseEntity {

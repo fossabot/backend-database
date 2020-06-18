@@ -1,12 +1,12 @@
 import { IsNotEmpty, IsString } from 'class-validator';
 import { Column, Entity, ManyToMany } from 'typeorm';
 import { BaseEntity } from '../base.entity';
-import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOffer.entity';
-import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
-import { PrivateOfferEntity } from '../privateOffer/privateOffer.entity';
-import { PrivateRequestEntity } from '../privateRequest/privateRequest.entity';
-import { InstitutionalMatchingProfileEntity } from '../institutionalMatchingProfile/institutionalMatchingProfile.entity';
-import { PrivateMatchingProfileEntity } from '../privateMatchingProfile/privateMatchingProfile.entity';
+import { InstitutionalOfferEntity } from '../..';
+import { InstitutionalRequestEntity } from '../..';
+import { PrivateOfferEntity } from '../..';
+import { PrivateRequestEntity } from '../..';
+import { InstitutionalMatchingProfileEntity } from '../..';
+import { PrivateMatchingProfileEntity } from '../..';
 
 @Entity('tags')
 export class TagEntity extends BaseEntity {

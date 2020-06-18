@@ -1,9 +1,9 @@
 import { IsBoolean, IsEnum, IsNotEmpty, IsNumber, IsPositive, IsUUID } from 'class-validator';
 import { Column, Entity, ManyToOne, OneToOne } from 'typeorm';
 import { BaseEntity } from '../base.entity';
-import { ClientType } from '../../enums/ClientType.enum';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { MatchingEntity } from '../matching/matching.entity';
+import { ClientType } from '../..';
+import { InstitutionEntity } from '../..';
+import { MatchingEntity } from '../..';
 
 @Entity('rewardRecord')
 export class RewardRecordEntity extends BaseEntity {

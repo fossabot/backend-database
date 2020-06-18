@@ -1,11 +1,11 @@
 import { IsNotEmpty, IsNumber, IsPositive, IsString, IsUUID } from 'class-validator';
 import { Column, Entity, JoinTable, ManyToMany } from 'typeorm';
 import { BaseEntity } from '../base.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { PrivateOfferEntity } from '../privateOffer/privateOffer.entity';
-import { PrivateRequestEntity } from '../privateRequest/privateRequest.entity';
-import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOffer.entity';
-import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
+import { CategoryEntity } from '../..';
+import { PrivateOfferEntity } from '../..';
+import { PrivateRequestEntity } from '../..';
+import { InstitutionalOfferEntity } from '../..';
+import { InstitutionalRequestEntity } from '../..';
 
 @Entity('rewardDefinitions')
 export class RewardDefinitionEntity extends BaseEntity {

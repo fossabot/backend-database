@@ -1,9 +1,8 @@
-import { IsBoolean, IsEnum, IsNotEmpty, IsUUID } from 'class-validator';
-import { Column, Entity, ManyToOne, OneToOne } from 'typeorm';
+import { IsEnum, IsNotEmpty, IsUUID } from 'class-validator';
+import { Column, Entity} from 'typeorm';
 import { BaseEntity } from '../base.entity';
-import { ClientType } from '../../enums/ClientType.enum';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { ItemType } from '../../enums/ItemType.enum';
+import { ClientType } from '../..';
+import { ItemType } from '../..';
 
 @Entity('matchings')
 export class MatchingEntity extends BaseEntity {

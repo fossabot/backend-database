@@ -4,8 +4,10 @@
   "description": "Contains all entities and DTOs including validation and OpenAPI annotations.The latter are dependent on NestJS used for microservices, so additional dependencies are needed.The ORM used is TypeORM.",
   "author": "impAct",
   "license": "GPL-3.0-only",
-  "main": "src/entities/index.ts",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
+    "compile-typescript": "tsc",
     "prettier:fix": "prettier --write \"src/**/*.ts\"",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
     "sync": "npm run typeorm schema:sync",

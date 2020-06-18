@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsArray, IsString } from 'class-validator';
 import { Type } from 'class-transformer';
-import { GetCategoryDto } from '../category/responses.dto';
+import { GetCategoryDto } from '../..';
 import { BaseResponseDto } from '../baseResponse.dto';
 
 export class GetInstitutionDto extends BaseResponseDto {

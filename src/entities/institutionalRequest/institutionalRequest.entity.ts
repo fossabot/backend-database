@@ -1,10 +1,10 @@
 import { Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne } from 'typeorm';
-import { InstitutionalItemEntity } from '../institutionalItem/institutionalItem.entity';
-import { TagEntity } from '../tag/tag.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { InstitutionMemberEntity } from '../institutionMember/institutionMember.entity';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
+import { InstitutionalItemEntity } from '../..';
+import { TagEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { InstitutionMemberEntity } from '../..';
+import { InstitutionEntity } from '../..';
+import { RewardDefinitionEntity } from '../..';
 
 @Entity('institutionalRequests')
 export class InstitutionalRequestEntity extends InstitutionalItemEntity {

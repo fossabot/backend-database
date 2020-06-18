@@ -1,9 +1,9 @@
 import { Column, Entity, Generated, JoinColumn, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
-import { AddressEntity } from '../address/address.entity';
+import { AddressEntity } from '../..';
 import { IsNotEmpty, IsUUID } from 'class-validator';
-import { PrivateOfferEntity } from '../privateOffer/privateOffer.entity';
-import { PrivateRequestEntity } from '../privateRequest/privateRequest.entity';
-import { PrivateMatchingProfileEntity } from '../privateMatchingProfile/privateMatchingProfile.entity';
+import { PrivateOfferEntity } from '../..';
+import { PrivateRequestEntity } from '../..';
+import { PrivateMatchingProfileEntity } from '../..';
 
 @Entity('users')
 export class UserEntity {

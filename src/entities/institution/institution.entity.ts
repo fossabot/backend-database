@@ -1,18 +1,15 @@
-import { IsArray, IsEmail, IsNotEmpty, IsNumberString, IsOptional, IsString, IsUUID, ValidateNested } from 'class-validator';
+import { IsArray, IsEmail, IsNotEmpty, IsNumberString, IsOptional, IsString, IsUUID} from 'class-validator';
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne } from 'typeorm';
-import { CategoryEntity } from '../category/category.entity';
+import { CategoryEntity } from '../..';
 import { BaseEntity } from '../base.entity';
-import { AddressEntity } from '../address/address.entity';
-import { InstitutionAdminEntity } from '../institutionAdmin/institutionAdmin.entity';
-import { InstitutionTypeEntity } from '../institutionType/institutionType.entity';
-import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOffer.entity';
+import { AddressEntity } from '../..';
+import { InstitutionAdminEntity } from '../..';
+import { InstitutionTypeEntity } from '../..';
+import { InstitutionalOfferEntity } from '../..';
 import { Type } from 'class-transformer';
-import { GetCategoryDto } from '../category/responses.dto';
-import { validateEach } from '@nestjs/common/utils/validate-each.util';
-import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
-import { RewardRecordEntity } from '../rewardRecord/rewardRecord.entity';
-import { PrivateMatchingProfileEntity } from '../privateMatchingProfile/privateMatchingProfile.entity';
-import { InstitutionalMatchingProfileEntity } from '../institutionalMatchingProfile/institutionalMatchingProfile.entity';
+import { InstitutionalRequestEntity } from '../..';
+import { RewardRecordEntity } from '../..';
+import { InstitutionalMatchingProfileEntity } from '../..';
 
 @Entity('institutions')
 export class InstitutionEntity extends BaseEntity {

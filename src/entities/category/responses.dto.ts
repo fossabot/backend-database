@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsOptional, IsString } from 'class-validator';
-import { InstitutionEntity } from '../institution/institution.entity';
+import { InstitutionEntity } from '../..';
 import { Type } from 'class-transformer';
 import { BaseResponseDto } from '../baseResponse.dto';
 

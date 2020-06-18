@@ -1,7 +1,7 @@
 import { Column, JoinColumn, OneToOne } from 'typeorm';
 import { IsDate, IsInt, IsNotEmpty, IsOptional, IsPositive, IsString, IsUUID } from 'class-validator';
 import { BaseEntity } from '../base.entity';
-import { AddressEntity } from '../address/address.entity';
+import { AddressEntity } from '../..';
 
 export abstract class PrivateItemEntity extends BaseEntity {
   @Column()

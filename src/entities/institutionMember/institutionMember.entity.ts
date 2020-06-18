@@ -1,6 +1,6 @@
 import { Entity, Generated, OneToMany, PrimaryColumn } from 'typeorm';
-import { InstitutionalOfferEntity } from '../institutionalOffer/institutionalOffer.entity';
-import { InstitutionalRequestEntity } from '../institutionalRequest/institutionalRequest.entity';
+import { InstitutionalOfferEntity } from '../..';
+import { InstitutionalRequestEntity } from '../..';
 
 @Entity('institutionalMembers')
 export class InstitutionMemberEntity {

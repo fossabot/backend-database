@@ -1,11 +1,9 @@
 import { IsArray, IsNotEmpty, IsNumber, IsPositive, IsString, IsUUID } from 'class-validator';
-import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToOne } from 'typeorm';
+import { Column, Entity, JoinTable, ManyToMany, OneToOne } from 'typeorm';
 import { BaseEntity } from '../base.entity';
-import { InstitutionEntity } from '../institution/institution.entity';
-import { MatchingEntity } from '../matching/matching.entity';
-import { UserEntity } from '../user/user.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { TagEntity } from '../tag/tag.entity';
+import { UserEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { TagEntity } from '../..';
 
 @Entity('privateMatchingProfiles')
 export class PrivateMatchingProfileEntity extends BaseEntity {

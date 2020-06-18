@@ -1,6 +1,6 @@
-import { IsArray, IsNotEmpty, IsString, IsUUID } from 'class-validator';
+import { IsArray, IsNotEmpty, IsString} from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { GetCategoryDto } from '../category/responses.dto';
+import { GetCategoryDto } from '../..';
 import { Type } from 'class-transformer';
 
 export class CreateInstitutionDto {

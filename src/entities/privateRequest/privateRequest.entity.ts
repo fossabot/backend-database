@@ -1,9 +1,9 @@
 import { Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne } from 'typeorm';
-import { TagEntity } from '../tag/tag.entity';
-import { CategoryEntity } from '../category/category.entity';
-import { PrivateItemEntity } from '../privateItem/privateItem.entity';
-import { UserEntity } from '../user/user.entity';
-import { RewardDefinitionEntity } from '../rewardDefinition/rewardDefinition.entity';
+import { TagEntity } from '../..';
+import { CategoryEntity } from '../..';
+import { PrivateItemEntity } from '../..';
+import { UserEntity } from '../..';
+import { RewardDefinitionEntity } from '../..';
 
 @Entity('privateRequests')
 export class PrivateRequestEntity extends PrivateItemEntity {

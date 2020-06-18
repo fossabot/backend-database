@@ -1,5 +1,5 @@
 import { Entity, Generated, OneToOne, PrimaryColumn } from 'typeorm';
-import { InstitutionEntity } from '../institution/institution.entity';
+import { InstitutionEntity } from '../..';
 
 @Entity('institutionAdmins')
 export class InstitutionAdminEntity {
