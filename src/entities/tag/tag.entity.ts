@@ -1,4 +1,3 @@
-import { IsNotEmpty, IsString } from 'class-validator';
 import { Column, Entity, ManyToMany } from 'typeorm';
 import { BaseEntity } from '../base.entity';
 import { InstitutionalOfferEntity } from '../..';
@@ -10,29 +9,27 @@ import { PrivateMatchingProfileEntity } from '../..';
 
 @Entity('tags')
 export class TagEntity extends BaseEntity {
-  @Column()
-  @IsNotEmpty()
-  @IsString()
+  @Column({type: 'varchar', nullable: false, unique: true })
   name: string;
 
   /*
    * Relations
    * */
   @ManyToMany(() => InstitutionalOfferEntity, (institutionalOffer) => institutionalOffer.tags)
-  institutionalOffers?: InstitutionalOfferEntity[];
+  institutionalOffers: InstitutionalOfferEntity[];
 
   @ManyToMany(() => InstitutionalRequestEntity, (institutionalRequest) => institutionalRequest.tags)
-  institutionalRequests?: InstitutionalRequestEntity[];
+  institutionalRequests: InstitutionalRequestEntity[];
 
   @ManyToMany(() => PrivateOfferEntity, (privateOffer) => privateOffer.tags)
-  privateOffers?: PrivateOfferEntity[];
+  privateOffers: PrivateOfferEntity[];
 
   @ManyToMany(() => PrivateRequestEntity, (privateRequest) => privateRequest.tags)
-  privateRequests?: PrivateRequestEntity[];
+  privateRequests: PrivateRequestEntity[];
 
   @ManyToMany(() => InstitutionalMatchingProfileEntity, (institutionalMatchingProfile) => institutionalMatchingProfile.tags)
-  institutionalMatchingProfiles?: InstitutionalMatchingProfileEntity[];
+  institutionalMatchingProfiles: InstitutionalMatchingProfileEntity[];
 
   @ManyToMany(() => PrivateMatchingProfileEntity, (privateMatchingProfile) => privateMatchingProfile.tags)
-  privateMatchingProfiles?: PrivateMatchingProfileEntity[];
+  privateMatchingProfiles: PrivateMatchingProfileEntity[];
 }

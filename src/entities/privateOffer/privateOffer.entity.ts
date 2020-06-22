@@ -38,7 +38,7 @@ export class PrivateOfferEntity extends PrivateItemEntity {
   })
   tags?: TagEntity[];
 
-  @ManyToOne(() => UserEntity, (user) => user.offers)
+  @ManyToOne(() => UserEntity, (user) => user.privateOffers)
   @JoinColumn()
   user: UserEntity;
 

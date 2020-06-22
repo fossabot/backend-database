@@ -6,11 +6,11 @@ export class BaseResponseDto {
   @IsString()
   id: string;
 
-  @ApiProperty({ type: Date })
+  @ApiProperty({ type: 'string', format: 'date' })
   @IsDate()
   createdAt: Date;
 
-  @ApiProperty({ type: Date })
+  @ApiProperty({ type: 'string', format: 'date' })
   @IsDate()
   updatedAt: Date;
 }

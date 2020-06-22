@@ -22,45 +22,57 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.RewardRecordEntity = void 0;
-var typeorm_1 = require("typeorm");
-var base_entity_1 = require("../base.entity");
+exports.rewardRecordJoin = exports.rewardRecordSerialize = exports.GetRewardRecordWithRelationsDto = exports.GetRewardRecordDto = void 0;
+var baseResponse_dto_1 = require("../baseResponse.dto");
+var swagger_1 = require("@nestjs/swagger");
 var ClientType_enum_1 = require("../../enums/ClientType.enum");
 var __1 = require("../..");
 var __2 = require("../..");
-var RewardRecordEntity = /** @class */ (function (_super) {
-    __extends(RewardRecordEntity, _super);
-    function RewardRecordEntity() {
+var GetRewardRecordDto = /** @class */ (function (_super) {
+    __extends(GetRewardRecordDto, _super);
+    function GetRewardRecordDto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.Column({ type: 'double precision', nullable: false }),
+        swagger_1.ApiProperty({ type: 'number', format: 'double' }),
         __metadata("design:type", Number)
-    ], RewardRecordEntity.prototype, "points", void 0);
+    ], GetRewardRecordDto.prototype, "points", void 0);
     __decorate([
-        typeorm_1.Column({ default: false, nullable: false }),
+        swagger_1.ApiProperty({ type: 'boolean' }),
         __metadata("design:type", Boolean)
-    ], RewardRecordEntity.prototype, "verified", void 0);
+    ], GetRewardRecordDto.prototype, "verified", void 0);
     __decorate([
-        typeorm_1.Column('enum', { enum: ClientType_enum_1.ClientType, nullable: false }),
+        swagger_1.ApiProperty({ type: 'enum', enum: ClientType_enum_1.ClientType }),
         __metadata("design:type", String)
-    ], RewardRecordEntity.prototype, "receiverType", void 0);
+    ], GetRewardRecordDto.prototype, "receiverType", void 0);
     __decorate([
-        typeorm_1.Column({ type: 'uuid', nullable: false }),
+        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
         __metadata("design:type", String)
-    ], RewardRecordEntity.prototype, "rewardReceiverId", void 0);
+    ], GetRewardRecordDto.prototype, "rewardReceiverId", void 0);
+    return GetRewardRecordDto;
+}(baseResponse_dto_1.BaseResponseDto));
+exports.GetRewardRecordDto = GetRewardRecordDto;
+var GetRewardRecordWithRelationsDto = /** @class */ (function (_super) {
+    __extends(GetRewardRecordWithRelationsDto, _super);
+    function GetRewardRecordWithRelationsDto() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     __decorate([
-        typeorm_1.ManyToOne(function () { return __1.InstitutionEntity; }, function (institution) { return institution.verifiedRewardRecords; }),
+        swagger_1.ApiProperty({ type: __1.InstitutionEntity, required: false }),
         __metadata("design:type", __1.InstitutionEntity)
-    ], RewardRecordEntity.prototype, "verifyingInstitution", void 0);
+    ], GetRewardRecordWithRelationsDto.prototype, "verifyingInstitution", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return __2.MatchingEntity; }, function (matching) { return matching.rewardRecord; }),
-        typeorm_1.JoinColumn(),
+        swagger_1.ApiProperty({ type: __2.MatchingEntity, required: false }),
         __metadata("design:type", __2.MatchingEntity)
-    ], RewardRecordEntity.prototype, "matching", void 0);
-    RewardRecordEntity = __decorate([
-        typeorm_1.Entity('rewardRecord')
-    ], RewardRecordEntity);
-    return RewardRecordEntity;
-}(base_entity_1.BaseEntity));
-exports.RewardRecordEntity = RewardRecordEntity;
+    ], GetRewardRecordWithRelationsDto.prototype, "matching", void 0);
+    return GetRewardRecordWithRelationsDto;
+}(GetRewardRecordDto));
+exports.GetRewardRecordWithRelationsDto = GetRewardRecordWithRelationsDto;
+exports.rewardRecordSerialize = {
+    get: GetRewardRecordWithRelationsDto,
+    create: GetRewardRecordDto
+};
+exports.rewardRecordJoin = {
+    verifyingInstitution: {},
+    matching: {}
+};

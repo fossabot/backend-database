@@ -65,7 +65,7 @@ var PrivateRequestEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], PrivateRequestEntity.prototype, "tags", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return __4.UserEntity; }, function (user) { return user.requests; }),
+        typeorm_1.ManyToOne(function () { return __4.UserEntity; }, function (user) { return user.privateRequests; }),
         typeorm_1.JoinColumn(),
         __metadata("design:type", __4.UserEntity)
     ], PrivateRequestEntity.prototype, "user", void 0);

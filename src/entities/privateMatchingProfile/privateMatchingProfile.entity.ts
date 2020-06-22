@@ -29,7 +29,7 @@ export class PrivateMatchingProfileEntity extends BaseEntity {
   /*
    * Relations
    * */
-  @OneToOne(() => UserEntity, (user) => user.matchingProfile)
+  @OneToOne(() => UserEntity, (user) => user.privateMatchingProfile)
   user: UserEntity;
 
   @ManyToMany(() => CategoryEntity, (category) => category.privateMatchingProfiles)

@@ -1,6 +1,7 @@
 import { BaseEntity } from '../base.entity';
 import { ClientType } from '../../enums/ClientType.enum';
 import { ItemType } from '../../enums/ItemType.enum';
+import { RewardRecordEntity } from '../..';
 export declare class MatchingEntity extends BaseEntity {
     clientType: ClientType;
     clientId: string;
@@ -8,4 +9,5 @@ export declare class MatchingEntity extends BaseEntity {
     itemId: string;
     rewardReceiverType: ClientType;
     rewardReceiverId: string;
+    rewardRecord: RewardRecordEntity;
 }

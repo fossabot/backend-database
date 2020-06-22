@@ -23,7 +23,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TagEntity = void 0;
-var class_validator_1 = require("class-validator");
 var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
 var __1 = require("../..");
@@ -38,9 +37,7 @@ var TagEntity = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsString(),
+        typeorm_1.Column({ type: 'varchar', nullable: false, unique: true }),
         __metadata("design:type", String)
     ], TagEntity.prototype, "name", void 0);
     __decorate([

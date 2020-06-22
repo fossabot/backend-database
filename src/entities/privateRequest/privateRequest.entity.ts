@@ -38,7 +38,7 @@ export class PrivateRequestEntity extends PrivateItemEntity {
   })
   tags?: TagEntity[];
 
-  @ManyToOne(() => UserEntity, (user) => user.requests)
+  @ManyToOne(() => UserEntity, (user) => user.privateRequests)
   @JoinColumn()
   user: UserEntity;
 

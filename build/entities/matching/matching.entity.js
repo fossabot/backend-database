@@ -28,6 +28,7 @@ var typeorm_1 = require("typeorm");
 var base_entity_1 = require("../base.entity");
 var ClientType_enum_1 = require("../../enums/ClientType.enum");
 var ItemType_enum_1 = require("../../enums/ItemType.enum");
+var __1 = require("../..");
 var MatchingEntity = /** @class */ (function (_super) {
     __extends(MatchingEntity, _super);
     function MatchingEntity() {
@@ -69,6 +70,10 @@ var MatchingEntity = /** @class */ (function (_super) {
         class_validator_1.IsUUID('4'),
         __metadata("design:type", String)
     ], MatchingEntity.prototype, "rewardReceiverId", void 0);
+    __decorate([
+        typeorm_1.OneToOne(function () { return __1.RewardRecordEntity; }, function (rewardRecord) { return rewardRecord.matching; }),
+        __metadata("design:type", __1.RewardRecordEntity)
+    ], MatchingEntity.prototype, "rewardRecord", void 0);
     MatchingEntity = __decorate([
         typeorm_1.Entity('matchings')
     ], MatchingEntity);

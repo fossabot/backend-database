@@ -1,5 +1,4 @@
-import { IsBoolean, IsEnum, IsNotEmpty, IsNumber, IsPositive, IsUUID } from 'class-validator';
-import { Column, Entity, ManyToOne, OneToOne } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToOne } from 'typeorm';
 import { BaseEntity } from '../base.entity';
 import { ClientType } from '../../enums/ClientType.enum';
 import { InstitutionEntity } from '../..';
@@ -7,36 +6,17 @@ import { MatchingEntity } from '../..';
 
 @Entity('rewardRecord')
 export class RewardRecordEntity extends BaseEntity {
-  @Column('double precision')
-  @IsNotEmpty()
-  @IsNumber()
-  @IsPositive()
+  @Column({type: 'double precision', nullable: false})
   points: number;
 
-  @Column()
-  @IsNotEmpty()
-  @IsBoolean()
+  @Column({default: false, nullable: false})
   verified: boolean;
 
-  @Column('enum', { enum: ClientType })
-  @IsNotEmpty()
-  @IsEnum(ClientType)
+  @Column('enum', { enum: ClientType, nullable: false})
   receiverType: ClientType;
 
-  @Column('uuid')
-  @IsNotEmpty()
-  @IsUUID('4')
-  verifyingInstitutionId: string;
-
-  @Column('uuid')
-  @IsNotEmpty()
-  @IsUUID('4')
+  @Column({type: 'uuid', nullable: false})
   rewardReceiverId: string;
-
-  @Column('uuid')
-  @IsNotEmpty()
-  @IsUUID('4')
-  matchingId: string;
 
   /*
    * Relations
@@ -44,6 +24,7 @@ export class RewardRecordEntity extends BaseEntity {
   @ManyToOne(() => InstitutionEntity, (institution) => institution.verifiedRewardRecords)
   verifyingInstitution: InstitutionEntity;
 
-  @OneToOne(() => MatchingEntity)
-  matching?: MatchingEntity;
+  @OneToOne(() => MatchingEntity, matching => matching.rewardRecord)
+  @JoinColumn()
+  matching: MatchingEntity;
 }

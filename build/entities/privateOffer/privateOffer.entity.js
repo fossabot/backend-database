@@ -65,7 +65,7 @@ var PrivateOfferEntity = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], PrivateOfferEntity.prototype, "tags", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function () { return __4.UserEntity; }, function (user) { return user.offers; }),
+        typeorm_1.ManyToOne(function () { return __4.UserEntity; }, function (user) { return user.privateOffers; }),
         typeorm_1.JoinColumn(),
         __metadata("design:type", __4.UserEntity)
     ], PrivateOfferEntity.prototype, "user", void 0);

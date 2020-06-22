@@ -58,7 +58,7 @@ var PrivateMatchingProfileEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], PrivateMatchingProfileEntity.prototype, "userId", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return __1.UserEntity; }, function (user) { return user.matchingProfile; }),
+        typeorm_1.OneToOne(function () { return __1.UserEntity; }, function (user) { return user.privateMatchingProfile; }),
         __metadata("design:type", __1.UserEntity)
     ], PrivateMatchingProfileEntity.prototype, "user", void 0);
     __decorate([

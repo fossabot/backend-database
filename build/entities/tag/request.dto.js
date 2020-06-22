@@ -9,27 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BaseResponseDto = void 0;
-var swagger_1 = require("@nestjs/swagger");
+exports.tagDto = exports.CreateTagDto = void 0;
 var class_validator_1 = require("class-validator");
-var BaseResponseDto = /** @class */ (function () {
-    function BaseResponseDto() {
+var swagger_1 = require("@nestjs/swagger");
+var CreateTagDto = /** @class */ (function () {
+    function CreateTagDto() {
     }
     __decorate([
-        swagger_1.ApiProperty({ type: 'string' }),
+        swagger_1.ApiProperty({ type: 'string', nullable: false }),
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], BaseResponseDto.prototype, "id", void 0);
-    __decorate([
-        swagger_1.ApiProperty({ type: 'string', format: 'date' }),
-        class_validator_1.IsDate(),
-        __metadata("design:type", Date)
-    ], BaseResponseDto.prototype, "createdAt", void 0);
-    __decorate([
-        swagger_1.ApiProperty({ type: 'string', format: 'date' }),
-        class_validator_1.IsDate(),
-        __metadata("design:type", Date)
-    ], BaseResponseDto.prototype, "updatedAt", void 0);
-    return BaseResponseDto;
+    ], CreateTagDto.prototype, "name", void 0);
+    return CreateTagDto;
 }());
-exports.BaseResponseDto = BaseResponseDto;
+exports.CreateTagDto = CreateTagDto;
+exports.tagDto = {
+    create: CreateTagDto
+};

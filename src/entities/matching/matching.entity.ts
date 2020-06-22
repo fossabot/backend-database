@@ -1,8 +1,9 @@
 import { IsEnum, IsNotEmpty, IsUUID } from 'class-validator';
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, OneToOne } from 'typeorm';
 import { BaseEntity } from '../base.entity';
 import { ClientType } from '../../enums/ClientType.enum';
 import { ItemType } from '../../enums/ItemType.enum';
+import { RewardRecordEntity } from '../..';
 
 @Entity('matchings')
 export class MatchingEntity extends BaseEntity {
@@ -35,4 +36,11 @@ export class MatchingEntity extends BaseEntity {
   @IsNotEmpty()
   @IsUUID('4')
   rewardReceiverId: string;
+
+  /*
+   * Relations
+   */
+
+  @OneToOne(() => RewardRecordEntity, rewardRecord => rewardRecord.matching)
+  rewardRecord: RewardRecordEntity;
 }
