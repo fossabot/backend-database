@@ -6,9 +6,7 @@ export { CategoryEntity } from './entities/category/category.entity';
 export { InstitutionEntity } from './entities/institution/institution.entity';
 export { InstitutionAdminEntity } from './entities/institutionAdmin/institutionAdmin.entity';
 export { InstitutionalItemEntity } from './entities/institutionalItem/institutionalItem.entity';
-export {
-  InstitutionalMatchingProfileEntity
-} from './entities/institutionalMatchingProfile/institutionalMatchingProfile.entity';
+export { InstitutionalMatchingProfileEntity } from './entities/institutionalMatchingProfile/institutionalMatchingProfile.entity';
 export { InstitutionalOfferEntity } from './entities/institutionalOffer/institutionalOffer.entity';
 export { InstitutionalRequestEntity } from './entities/institutionalRequest/institutionalRequest.entity';
 export { InstitutionMemberEntity } from './entities/institutionMember/institutionMember.entity';
@@ -47,4 +45,3 @@ export { GetInstitutionAdminPublicDto } from './entities/institutionAdmin/respon
 export { CreateInstitutionTypeDto } from './entities/institutionType/requests.dto';
 export { GetInstitutionTypeDto } from './entities/institutionType/responses.dto';
 export { GetInstitutionTypeWithRelationsDto } from './entities/institutionType/responses.dto';
-

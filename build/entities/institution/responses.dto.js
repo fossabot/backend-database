@@ -1,17 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -27,15 +14,18 @@ var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
 var class_transformer_1 = require("class-transformer");
 var __1 = require("../..");
-var baseResponse_dto_1 = require("../baseResponse.dto");
 var responses_dto_1 = require("../institutionAdmin/responses.dto");
 var responses_dto_2 = require("../institutionType/responses.dto");
 var responses_dto_3 = require("../address/responses.dto");
-var GetInstitutionDto = /** @class */ (function (_super) {
-    __extends(GetInstitutionDto, _super);
+var GetInstitutionDto = /** @class */ (function () {
     function GetInstitutionDto() {
-        return _super !== null && _super.apply(this, arguments) || this;
     }
+    __decorate([
+        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
+        class_validator_1.IsNotEmpty(),
+        class_validator_1.IsUUID('4'),
+        __metadata("design:type", String)
+    ], GetInstitutionDto.prototype, "id", void 0);
     __decorate([
         swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
@@ -105,5 +95,5 @@ var GetInstitutionDto = /** @class */ (function (_super) {
         __metadata("design:type", Array)
     ], GetInstitutionDto.prototype, "categories", void 0);
     return GetInstitutionDto;
-}(baseResponse_dto_1.BaseResponseDto));
+}());
 exports.GetInstitutionDto = GetInstitutionDto;

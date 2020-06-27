@@ -1,6 +1,7 @@
 import { Gender } from '../..';
 import { BaseResponseDto } from '../baseResponse.dto';
-export declare class GetInstitutionAdminDto extends BaseResponseDto {
+export declare class GetInstitutionAdminDto {
+    id: string;
     gender: Gender;
     name: string;
     username: string;

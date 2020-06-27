@@ -1,9 +1,9 @@
 import { GetCategoryDto } from '../..';
-import { BaseResponseDto } from '../baseResponse.dto';
 import { GetInstitutionAdminPublicDto } from '../institutionAdmin/responses.dto';
 import { GetInstitutionTypeDto } from '../institutionType/responses.dto';
 import { GetAddressDto } from '../address/responses.dto';
-export declare class GetInstitutionDto extends BaseResponseDto {
+export declare class GetInstitutionDto {
+    id: string;
     name: string;
     description: string;
     contactEmail: string;

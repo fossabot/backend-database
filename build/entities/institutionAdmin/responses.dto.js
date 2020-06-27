@@ -27,11 +27,15 @@ var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
 var __1 = require("../..");
 var baseResponse_dto_1 = require("../baseResponse.dto");
-var GetInstitutionAdminDto = /** @class */ (function (_super) {
-    __extends(GetInstitutionAdminDto, _super);
+var GetInstitutionAdminDto = /** @class */ (function () {
     function GetInstitutionAdminDto() {
-        return _super !== null && _super.apply(this, arguments) || this;
     }
+    __decorate([
+        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
+        class_validator_1.IsNotEmpty(),
+        class_validator_1.IsUUID('4'),
+        __metadata("design:type", String)
+    ], GetInstitutionAdminDto.prototype, "id", void 0);
     __decorate([
         swagger_1.ApiProperty({ type: __1.Gender }),
         class_validator_1.IsNotEmpty(),
@@ -69,7 +73,7 @@ var GetInstitutionAdminDto = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], GetInstitutionAdminDto.prototype, "biography", void 0);
     return GetInstitutionAdminDto;
-}(baseResponse_dto_1.BaseResponseDto));
+}());
 exports.GetInstitutionAdminDto = GetInstitutionAdminDto;
 var GetInstitutionAdminPublicDto = /** @class */ (function (_super) {
     __extends(GetInstitutionAdminPublicDto, _super);

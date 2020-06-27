@@ -2,12 +2,16 @@ import { ApiProperty } from '@nestjs/swagger';
 import { IsArray, IsEmail, IsNotEmpty, IsOptional, IsPhoneNumber, IsString, IsUUID } from 'class-validator';
 import { Type } from 'class-transformer';
 import { GetCategoryDto } from '../..';
-import { BaseResponseDto } from '../baseResponse.dto';
 import { GetInstitutionAdminPublicDto } from '../institutionAdmin/responses.dto';
 import { GetInstitutionTypeDto } from '../institutionType/responses.dto';
 import { GetAddressDto } from '../address/responses.dto';
 
-export class GetInstitutionDto extends BaseResponseDto {
+export class GetInstitutionDto {
+  @ApiProperty({ type: 'string', format: 'uuid' })
+  @IsNotEmpty()
+  @IsUUID('4')
+  id: string;
+
   @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsString()
