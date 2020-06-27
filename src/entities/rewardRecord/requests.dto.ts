@@ -6,29 +6,29 @@ import { MatchingEntity } from '../matching/matching.entity';
 import { InstitutionEntity } from '../institution/institution.entity';
 
 export class CreateRewardRecordDto {
-  @ApiProperty({ type: 'number', format: 'double', minimum: 0 ,nullable: false})
+  @ApiProperty({ type: 'number', format: 'double', minimum: 0, nullable: false })
   @IsNumber()
   @IsPositive()
   points: number;
 
-  @ApiProperty({type: 'boolean', default: false})
+  @ApiProperty({ type: 'boolean', default: false })
   @IsBoolean()
-  verified: boolean
+  verified: boolean;
 
-  @ApiProperty({type: 'string', enum: ClientType, nullable: false})
+  @ApiProperty({ type: 'string', enum: ClientType, nullable: false })
   @IsEnum(ClientType)
-  receiverType: ClientType
+  receiverType: ClientType;
 
-  @ApiProperty({type: 'string', format: 'uuid', nullable: false})
+  @ApiProperty({ type: 'string', format: 'uuid', nullable: false })
   @IsUUID('4')
-  rewardReceiverId: string
+  rewardReceiverId: string;
 
-  @ApiProperty({type: MatchingEntity, nullable: false, required: true})
+  @ApiProperty({ type: MatchingEntity, nullable: false, required: true })
   @IsNotEmpty()
   @Type(() => MatchingEntity)
   matching: MatchingEntity;
 
-  @ApiProperty({type: InstitutionEntity, nullable: true, required: false})
+  @ApiProperty({ type: InstitutionEntity, nullable: true, required: false })
   @IsOptional()
   @Type(() => InstitutionEntity)
   verifyingInstitution: InstitutionEntity;

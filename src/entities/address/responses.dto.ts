@@ -1,35 +1,34 @@
-import { Column, Entity } from 'typeorm';
-import { BaseEntity } from '../base.entity';
+import { ApiProperty } from '@nestjs/swagger';
 import { IsAlpha, IsAlphanumeric, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { BaseResponseDto } from '../baseResponse.dto';
 
-@Entity('addresses')
-export class AddressEntity extends BaseEntity {
-  @Column()
+export class GetAddressDto extends BaseResponseDto {
+  @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsAlpha()
   street: string;
 
-  @Column()
+  @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsAlphanumeric()
   number: string;
 
-  @Column()
+  @ApiProperty({ type: 'string' })
   @IsOptional()
   @IsString()
   addition?: string;
 
-  @Column()
+  @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsAlphanumeric()
   postalCode: string;
 
-  @Column()
+  @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsAlpha()
   city: string;
 
-  @Column()
+  @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsAlpha()
   country: string;

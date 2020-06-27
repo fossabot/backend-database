@@ -1,18 +1,14 @@
-import { IsArray, IsEmail, IsNotEmpty, IsNumberString, IsOptional, IsString, IsUUID } from 'class-validator';
-import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne } from 'typeorm';
-import { CategoryEntity } from '../..';
-import { BaseEntity } from '../base.entity';
-import { AddressEntity } from '../..';
-import { InstitutionAdminEntity } from '../..';
-import { InstitutionTypeEntity } from '../..';
-import { InstitutionalOfferEntity } from '../..';
+import { IsArray, IsEmail, IsNotEmpty, IsOptional, IsPhoneNumber, IsString, IsUUID } from 'class-validator';
+import { Column, Entity, Generated, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
+import { AddressEntity, CategoryEntity, InstitutionAdminEntity, InstitutionalMatchingProfileEntity, InstitutionalOfferEntity, InstitutionalRequestEntity, InstitutionTypeEntity, RewardRecordEntity } from '../..';
 import { Type } from 'class-transformer';
-import { InstitutionalRequestEntity } from '../..';
-import { RewardRecordEntity } from '../..';
-import { InstitutionalMatchingProfileEntity } from '../..';
 
 @Entity('institutions')
-export class InstitutionEntity extends BaseEntity {
+export class InstitutionEntity {
+  @PrimaryColumn({ type: 'uuid' })
+  @Generated('uuid')
+  id: string;
+
   @Column()
   @IsNotEmpty()
   @IsString()
@@ -30,7 +26,7 @@ export class InstitutionEntity extends BaseEntity {
 
   @Column()
   @IsOptional()
-  @IsNumberString()
+  @IsPhoneNumber(null)
   phoneNumber: string;
 
   @Column('uuid')

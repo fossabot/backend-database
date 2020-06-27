@@ -6,16 +6,16 @@ import { MatchingEntity } from '../..';
 
 @Entity('rewardRecord')
 export class RewardRecordEntity extends BaseEntity {
-  @Column({type: 'double precision', nullable: false})
+  @Column({ type: 'double precision', nullable: false })
   points: number;
 
-  @Column({default: false, nullable: false})
+  @Column({ default: false, nullable: false })
   verified: boolean;
 
-  @Column('enum', { enum: ClientType, nullable: false})
+  @Column('enum', { enum: ClientType, nullable: false })
   receiverType: ClientType;
 
-  @Column({type: 'uuid', nullable: false})
+  @Column({ type: 'uuid', nullable: false })
   rewardReceiverId: string;
 
   /*
@@ -24,7 +24,7 @@ export class RewardRecordEntity extends BaseEntity {
   @ManyToOne(() => InstitutionEntity, (institution) => institution.verifiedRewardRecords)
   verifyingInstitution: InstitutionEntity;
 
-  @OneToOne(() => MatchingEntity, matching => matching.rewardRecord)
+  @OneToOne(() => MatchingEntity, (matching) => matching.rewardRecord)
   @JoinColumn()
   matching: MatchingEntity;
 }

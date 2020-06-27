@@ -9,36 +9,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dto = exports.CreateInstitutionDto = void 0;
+exports.CreateInstitutionInternalDto = exports.CreateInstitutionFusionAuthDto = void 0;
 var class_validator_1 = require("class-validator");
 var swagger_1 = require("@nestjs/swagger");
 var __1 = require("../..");
 var class_transformer_1 = require("class-transformer");
-var CreateInstitutionDto = /** @class */ (function () {
-    function CreateInstitutionDto() {
+var CreateInstitutionFusionAuthDto = /** @class */ (function () {
+    function CreateInstitutionFusionAuthDto() {
     }
     __decorate([
         swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], CreateInstitutionDto.prototype, "name", void 0);
+    ], CreateInstitutionFusionAuthDto.prototype, "name", void 0);
     __decorate([
         swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], CreateInstitutionDto.prototype, "description", void 0);
+    ], CreateInstitutionFusionAuthDto.prototype, "description", void 0);
     __decorate([
-        swagger_1.ApiProperty({ type: __1.GetCategoryDto }),
+        swagger_1.ApiProperty({ type: 'string', format: 'email' }),
         class_validator_1.IsNotEmpty(),
+        class_validator_1.IsString(),
+        __metadata("design:type", String)
+    ], CreateInstitutionFusionAuthDto.prototype, "contactEmail", void 0);
+    __decorate([
+        swagger_1.ApiProperty({ type: 'string' }),
+        class_validator_1.IsNotEmpty(),
+        class_validator_1.IsPhoneNumber(null),
+        __metadata("design:type", String)
+    ], CreateInstitutionFusionAuthDto.prototype, "phoneNumber", void 0);
+    return CreateInstitutionFusionAuthDto;
+}());
+exports.CreateInstitutionFusionAuthDto = CreateInstitutionFusionAuthDto;
+var CreateInstitutionInternalDto = /** @class */ (function () {
+    function CreateInstitutionInternalDto() {
+    }
+    __decorate([
+        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
+        class_validator_1.IsNotEmpty(),
+        class_validator_1.IsString(),
+        __metadata("design:type", String)
+    ], CreateInstitutionInternalDto.prototype, "institutionTypeId", void 0);
+    __decorate([
+        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
+        class_validator_1.IsNotEmpty(),
+        class_validator_1.IsString(),
+        __metadata("design:type", String)
+    ], CreateInstitutionInternalDto.prototype, "institutionAdminId", void 0);
+    __decorate([
+        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
+        class_validator_1.IsNotEmpty(),
+        class_validator_1.IsString(),
+        __metadata("design:type", String)
+    ], CreateInstitutionInternalDto.prototype, "addressId", void 0);
+    __decorate([
+        swagger_1.ApiProperty({ type: __1.GetCategoryDto, isArray: true }),
         class_validator_1.IsArray(),
         class_transformer_1.Type(function () { return __1.GetCategoryDto; }),
         __metadata("design:type", Array)
-    ], CreateInstitutionDto.prototype, "categories", void 0);
-    return CreateInstitutionDto;
+    ], CreateInstitutionInternalDto.prototype, "categories", void 0);
+    return CreateInstitutionInternalDto;
 }());
-exports.CreateInstitutionDto = CreateInstitutionDto;
-exports.dto = {
-    create: CreateInstitutionDto
-};
+exports.CreateInstitutionInternalDto = CreateInstitutionInternalDto;

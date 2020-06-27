@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 /*
  * Entities
- */
+ * */
 var address_entity_1 = require("./entities/address/address.entity");
 Object.defineProperty(exports, "AddressEntity", { enumerable: true, get: function () { return address_entity_1.AddressEntity; } });
 var category_entity_1 = require("./entities/category/category.entity");
@@ -43,7 +43,7 @@ var user_entity_1 = require("./entities/user/user.entity");
 Object.defineProperty(exports, "UserEntity", { enumerable: true, get: function () { return user_entity_1.UserEntity; } });
 /*
  * Enums
- */
+ * */
 var ClientType_enum_1 = require("./enums/ClientType.enum");
 Object.defineProperty(exports, "ClientType", { enumerable: true, get: function () { return ClientType_enum_1.ClientType; } });
 var Gender_enum_1 = require("./enums/Gender.enum");
@@ -52,10 +52,32 @@ var ItemType_enum_1 = require("./enums/ItemType.enum");
 Object.defineProperty(exports, "ItemType", { enumerable: true, get: function () { return ItemType_enum_1.ItemType; } });
 /*
  * DTOs
- */
-var requests_dto_1 = require("./entities/category/requests.dto");
-Object.defineProperty(exports, "CreateCategoryDto", { enumerable: true, get: function () { return requests_dto_1.CreateCategoryDto; } });
-var responses_dto_1 = require("./entities/category/responses.dto");
-Object.defineProperty(exports, "GetCategoryDto", { enumerable: true, get: function () { return responses_dto_1.GetCategoryDto; } });
+ * */
+var requests_dto_1 = require("./entities/address/requests.dto");
+Object.defineProperty(exports, "CreateAddressDto", { enumerable: true, get: function () { return requests_dto_1.CreateAddressDto; } });
+var responses_dto_1 = require("./entities/address/responses.dto");
+Object.defineProperty(exports, "GetAddressDto", { enumerable: true, get: function () { return responses_dto_1.GetAddressDto; } });
+var requests_dto_2 = require("./entities/category/requests.dto");
+Object.defineProperty(exports, "CreateCategoryDto", { enumerable: true, get: function () { return requests_dto_2.CreateCategoryDto; } });
 var responses_dto_2 = require("./entities/category/responses.dto");
-Object.defineProperty(exports, "GetCategoryWithRelationsDto", { enumerable: true, get: function () { return responses_dto_2.GetCategoryWithRelationsDto; } });
+Object.defineProperty(exports, "GetCategoryDto", { enumerable: true, get: function () { return responses_dto_2.GetCategoryDto; } });
+var responses_dto_3 = require("./entities/category/responses.dto");
+Object.defineProperty(exports, "GetCategoryWithRelationsDto", { enumerable: true, get: function () { return responses_dto_3.GetCategoryWithRelationsDto; } });
+var requests_dto_3 = require("./entities/institution/requests.dto");
+Object.defineProperty(exports, "CreateInstitutionFusionAuthDto", { enumerable: true, get: function () { return requests_dto_3.CreateInstitutionFusionAuthDto; } });
+var requests_dto_4 = require("./entities/institution/requests.dto");
+Object.defineProperty(exports, "CreateInstitutionInternalDto", { enumerable: true, get: function () { return requests_dto_4.CreateInstitutionInternalDto; } });
+var responses_dto_4 = require("./entities/institution/responses.dto");
+Object.defineProperty(exports, "GetInstitutionDto", { enumerable: true, get: function () { return responses_dto_4.GetInstitutionDto; } });
+var requests_dto_5 = require("./entities/institutionAdmin/requests.dto");
+Object.defineProperty(exports, "CreateInstitutionAdminDto", { enumerable: true, get: function () { return requests_dto_5.CreateInstitutionAdminDto; } });
+var responses_dto_5 = require("./entities/institutionAdmin/responses.dto");
+Object.defineProperty(exports, "GetInstitutionAdminDto", { enumerable: true, get: function () { return responses_dto_5.GetInstitutionAdminDto; } });
+var responses_dto_6 = require("./entities/institutionAdmin/responses.dto");
+Object.defineProperty(exports, "GetInstitutionAdminPublicDto", { enumerable: true, get: function () { return responses_dto_6.GetInstitutionAdminPublicDto; } });
+var requests_dto_6 = require("./entities/institutionType/requests.dto");
+Object.defineProperty(exports, "CreateInstitutionTypeDto", { enumerable: true, get: function () { return requests_dto_6.CreateInstitutionTypeDto; } });
+var responses_dto_7 = require("./entities/institutionType/responses.dto");
+Object.defineProperty(exports, "GetInstitutionTypeDto", { enumerable: true, get: function () { return responses_dto_7.GetInstitutionTypeDto; } });
+var responses_dto_8 = require("./entities/institutionType/responses.dto");
+Object.defineProperty(exports, "GetInstitutionTypeWithRelationsDto", { enumerable: true, get: function () { return responses_dto_8.GetInstitutionTypeWithRelationsDto; } });

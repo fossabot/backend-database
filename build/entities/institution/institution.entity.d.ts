@@ -1,13 +1,6 @@
-import { CategoryEntity } from '../..';
-import { BaseEntity } from '../base.entity';
-import { AddressEntity } from '../..';
-import { InstitutionAdminEntity } from '../..';
-import { InstitutionTypeEntity } from '../..';
-import { InstitutionalOfferEntity } from '../..';
-import { InstitutionalRequestEntity } from '../..';
-import { RewardRecordEntity } from '../..';
-import { InstitutionalMatchingProfileEntity } from '../..';
-export declare class InstitutionEntity extends BaseEntity {
+import { AddressEntity, CategoryEntity, InstitutionAdminEntity, InstitutionalMatchingProfileEntity, InstitutionalOfferEntity, InstitutionalRequestEntity, InstitutionTypeEntity, RewardRecordEntity } from '../..';
+export declare class InstitutionEntity {
+    id: string;
     name: string;
     description: string;
     contactEmail: string;

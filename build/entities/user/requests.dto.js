@@ -59,7 +59,7 @@ var CreateUserDto = /** @class */ (function () {
         __metadata("design:type", Boolean)
     ], CreateUserDto.prototype, "verified", void 0);
     __decorate([
-        swagger_1.ApiProperty({ type: 'string', name: "phone_number", nullable: true }),
+        swagger_1.ApiProperty({ type: 'string', name: 'phone_number', nullable: true }),
         class_validator_1.IsOptional(),
         class_validator_1.IsString(),
         __metadata("design:type", String)

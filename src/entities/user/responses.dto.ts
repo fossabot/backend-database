@@ -7,34 +7,34 @@ import { AddressEntity } from '../address/address.entity';
 import { PrivateMatchingProfileEntity } from '../privateMatchingProfile/privateMatchingProfile.entity';
 
 export class GetUserDto extends BaseResponseDto {
-  @ApiProperty({enum: Gender})
+  @ApiProperty({ enum: Gender })
   gender: Gender;
 
-  @ApiProperty({type: 'string'})
+  @ApiProperty({ type: 'string' })
   name: string;
 
-  @ApiProperty({type: 'string'})
+  @ApiProperty({ type: 'string' })
   username: string;
 
-  @ApiProperty({type: 'string'})
+  @ApiProperty({ type: 'string' })
   email: string;
 
-  @ApiProperty({type: 'string', format: 'date'})
+  @ApiProperty({ type: 'string', format: 'date' })
   dob: Date;
 
-  @ApiProperty({type: 'string'})
+  @ApiProperty({ type: 'string' })
   biography: string;
 
-  @ApiProperty({type: 'boolean'})
+  @ApiProperty({ type: 'boolean' })
   verified: boolean;
 
-  @ApiProperty({type: 'string'})
+  @ApiProperty({ type: 'string' })
   phoneNumber: string;
 
   /*
    * Relations
    * */
-  @ApiProperty({type: AddressEntity, required: false})
+  @ApiProperty({ type: AddressEntity, required: false })
   address: AddressEntity;
 }
 
@@ -59,4 +59,4 @@ export const userJoin = {
   privateOffers: {},
   privateRequests: {},
   privateMatchingProfile: {}
-}
+};

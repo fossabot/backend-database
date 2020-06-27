@@ -1,12 +1,18 @@
 import { GetCategoryDto } from '../..';
 import { BaseResponseDto } from '../baseResponse.dto';
+import { GetInstitutionAdminPublicDto } from '../institutionAdmin/responses.dto';
+import { GetInstitutionTypeDto } from '../institutionType/responses.dto';
+import { GetAddressDto } from '../address/responses.dto';
 export declare class GetInstitutionDto extends BaseResponseDto {
-    id: string;
     name: string;
     description: string;
-    categories: GetCategoryDto[];
+    contactEmail: string;
+    phoneNumber?: string;
+    institutionTypeId: string;
+    institutionAdminId: string;
+    addressId: string;
+    institutionType?: GetInstitutionTypeDto[];
+    institutionAdmin?: GetInstitutionAdminPublicDto;
+    address?: GetAddressDto;
+    categories?: GetCategoryDto[];
 }
-export declare const serialize: {
-    get: typeof GetInstitutionDto;
-    create: typeof GetInstitutionDto;
-};

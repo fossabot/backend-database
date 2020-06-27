@@ -7,36 +7,35 @@ import { PrivateRequestEntity } from '../..';
 import { BaseEntity } from '../base.entity';
 
 @Entity('users')
-export class UserEntity extends BaseEntity{
-
-  @Column('enum',{enum: Gender, nullable: false})
+export class UserEntity extends BaseEntity {
+  @Column('enum', { enum: Gender, nullable: false })
   gender: Gender;
 
-  @Column('varchar',{nullable: false})
+  @Column('varchar', { nullable: false })
   name: string;
 
-  @Column('varchar',{name: "username", nullable: false, unique: true})
+  @Column('varchar', { name: 'username', nullable: false, unique: true })
   username: string;
 
-  @Column('varchar',{name: "email", nullable: false, unique: true})
+  @Column('varchar', { name: 'email', nullable: false, unique: true })
   email: string;
 
-  @Column('date',{nullable: true})
+  @Column('date', { nullable: true })
   dob: Date;
 
-  @Column('text', {nullable: true})
+  @Column('text', { nullable: true })
   biography: string;
 
-  @Column('boolean',{default: false, nullable: false})
+  @Column('boolean', { default: false, nullable: false })
   verified: boolean;
 
-  @Column({name: "phone_number", nullable: true})
+  @Column({ name: 'phone_number', nullable: true })
   phoneNumber: string;
 
   /*
    * Relations
    * */
-  @OneToOne(() => AddressEntity, {nullable: false})
+  @OneToOne(() => AddressEntity, { nullable: false })
   @JoinColumn()
   address: AddressEntity;
 

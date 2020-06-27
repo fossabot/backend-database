@@ -9,7 +9,7 @@ import { PrivateMatchingProfileEntity } from '../..';
 
 @Entity('tags')
 export class TagEntity extends BaseEntity {
-  @Column({type: 'varchar', nullable: false, unique: true })
+  @Column({ type: 'varchar', nullable: false, unique: true })
   name: string;
 
   /*

@@ -5,24 +5,24 @@ import { InstitutionEntity } from '../..';
 import { MatchingEntity } from '../..';
 
 export class GetRewardRecordDto extends BaseResponseDto {
-  @ApiProperty({type: 'number', format: 'double'})
+  @ApiProperty({ type: 'number', format: 'double' })
   points: number;
 
-  @ApiProperty({type: 'boolean'})
+  @ApiProperty({ type: 'boolean' })
   verified: boolean;
 
-  @ApiProperty({type: 'enum', enum: ClientType})
+  @ApiProperty({ type: 'enum', enum: ClientType })
   receiverType: ClientType;
 
-  @ApiProperty({type: 'string', format: 'uuid'})
+  @ApiProperty({ type: 'string', format: 'uuid' })
   rewardReceiverId: string;
 }
 
 export class GetRewardRecordWithRelationsDto extends GetRewardRecordDto {
-  @ApiProperty({type: InstitutionEntity, required: false})
+  @ApiProperty({ type: InstitutionEntity, required: false })
   verifyingInstitution: InstitutionEntity;
 
-  @ApiProperty({type: MatchingEntity, required: false})
+  @ApiProperty({ type: MatchingEntity, required: false })
   matching: MatchingEntity;
 }
 
@@ -34,4 +34,4 @@ export const rewardRecordSerialize = {
 export const rewardRecordJoin = {
   verifyingInstitution: {},
   matching: {}
-}
+};

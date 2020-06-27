@@ -41,6 +41,6 @@ export class MatchingEntity extends BaseEntity {
    * Relations
    */
 
-  @OneToOne(() => RewardRecordEntity, rewardRecord => rewardRecord.matching)
+  @OneToOne(() => RewardRecordEntity, (rewardRecord) => rewardRecord.matching)
   rewardRecord: RewardRecordEntity;
 }

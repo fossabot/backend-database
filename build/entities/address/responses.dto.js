@@ -22,54 +22,51 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddressEntity = void 0;
-var typeorm_1 = require("typeorm");
-var base_entity_1 = require("../base.entity");
+exports.GetAddressDto = void 0;
+var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var AddressEntity = /** @class */ (function (_super) {
-    __extends(AddressEntity, _super);
-    function AddressEntity() {
+var baseResponse_dto_1 = require("../baseResponse.dto");
+var GetAddressDto = /** @class */ (function (_super) {
+    __extends(GetAddressDto, _super);
+    function GetAddressDto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.Column(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsAlpha(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "street", void 0);
+    ], GetAddressDto.prototype, "street", void 0);
     __decorate([
-        typeorm_1.Column(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsAlphanumeric(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "number", void 0);
+    ], GetAddressDto.prototype, "number", void 0);
     __decorate([
-        typeorm_1.Column(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsOptional(),
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "addition", void 0);
+    ], GetAddressDto.prototype, "addition", void 0);
     __decorate([
-        typeorm_1.Column(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsAlphanumeric(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "postalCode", void 0);
+    ], GetAddressDto.prototype, "postalCode", void 0);
     __decorate([
-        typeorm_1.Column(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsAlpha(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "city", void 0);
+    ], GetAddressDto.prototype, "city", void 0);
     __decorate([
-        typeorm_1.Column(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsAlpha(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "country", void 0);
-    AddressEntity = __decorate([
-        typeorm_1.Entity('addresses')
-    ], AddressEntity);
-    return AddressEntity;
-}(base_entity_1.BaseEntity));
-exports.AddressEntity = AddressEntity;
+    ], GetAddressDto.prototype, "country", void 0);
+    return GetAddressDto;
+}(baseResponse_dto_1.BaseResponseDto));
+exports.GetAddressDto = GetAddressDto;

@@ -44,11 +44,11 @@ var UserEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], UserEntity.prototype, "name", void 0);
     __decorate([
-        typeorm_1.Column('varchar', { name: "username", nullable: false, unique: true }),
+        typeorm_1.Column('varchar', { name: 'username', nullable: false, unique: true }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "username", void 0);
     __decorate([
-        typeorm_1.Column('varchar', { name: "email", nullable: false, unique: true }),
+        typeorm_1.Column('varchar', { name: 'email', nullable: false, unique: true }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "email", void 0);
     __decorate([
@@ -64,7 +64,7 @@ var UserEntity = /** @class */ (function (_super) {
         __metadata("design:type", Boolean)
     ], UserEntity.prototype, "verified", void 0);
     __decorate([
-        typeorm_1.Column({ name: "phone_number", nullable: true }),
+        typeorm_1.Column({ name: 'phone_number', nullable: true }),
         __metadata("design:type", String)
     ], UserEntity.prototype, "phoneNumber", void 0);
     __decorate([

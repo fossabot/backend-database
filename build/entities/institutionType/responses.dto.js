@@ -22,54 +22,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddressEntity = void 0;
-var typeorm_1 = require("typeorm");
-var base_entity_1 = require("../base.entity");
+exports.serialize = exports.GetInstitutionTypeWithRelationsDto = exports.GetInstitutionTypeDto = void 0;
+var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
-var AddressEntity = /** @class */ (function (_super) {
-    __extends(AddressEntity, _super);
-    function AddressEntity() {
+var __1 = require("../..");
+var class_transformer_1 = require("class-transformer");
+var baseResponse_dto_1 = require("../baseResponse.dto");
+var GetInstitutionTypeDto = /** @class */ (function (_super) {
+    __extends(GetInstitutionTypeDto, _super);
+    function GetInstitutionTypeDto() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsAlpha(),
-        __metadata("design:type", String)
-    ], AddressEntity.prototype, "street", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsAlphanumeric(),
-        __metadata("design:type", String)
-    ], AddressEntity.prototype, "number", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsOptional(),
+        swagger_1.ApiProperty({ type: 'string' }),
         class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "addition", void 0);
+    ], GetInstitutionTypeDto.prototype, "name", void 0);
     __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsAlphanumeric(),
+        swagger_1.ApiProperty({ type: 'string' }),
+        class_validator_1.IsString(),
         __metadata("design:type", String)
-    ], AddressEntity.prototype, "postalCode", void 0);
+    ], GetInstitutionTypeDto.prototype, "description", void 0);
+    return GetInstitutionTypeDto;
+}(baseResponse_dto_1.BaseResponseDto));
+exports.GetInstitutionTypeDto = GetInstitutionTypeDto;
+var GetInstitutionTypeWithRelationsDto = /** @class */ (function (_super) {
+    __extends(GetInstitutionTypeWithRelationsDto, _super);
+    function GetInstitutionTypeWithRelationsDto() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsAlpha(),
-        __metadata("design:type", String)
-    ], AddressEntity.prototype, "city", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsAlpha(),
-        __metadata("design:type", String)
-    ], AddressEntity.prototype, "country", void 0);
-    AddressEntity = __decorate([
-        typeorm_1.Entity('addresses')
-    ], AddressEntity);
-    return AddressEntity;
-}(base_entity_1.BaseEntity));
-exports.AddressEntity = AddressEntity;
+        swagger_1.ApiProperty({ type: __1.InstitutionEntity, required: false, isArray: true }),
+        class_validator_1.IsOptional(),
+        class_transformer_1.Type(function () { return __1.InstitutionEntity; }),
+        __metadata("design:type", Array)
+    ], GetInstitutionTypeWithRelationsDto.prototype, "institutions", void 0);
+    return GetInstitutionTypeWithRelationsDto;
+}(GetInstitutionTypeDto));
+exports.GetInstitutionTypeWithRelationsDto = GetInstitutionTypeWithRelationsDto;
+exports.serialize = {
+    get: GetInstitutionTypeWithRelationsDto,
+    create: GetInstitutionTypeDto
+};

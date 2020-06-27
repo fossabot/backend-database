@@ -1,9 +1,9 @@
-import { IsArray, IsNotEmpty, IsString } from 'class-validator';
+import { IsArray, IsNotEmpty, IsPhoneNumber, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 import { GetCategoryDto } from '../..';
 import { Type } from 'class-transformer';
 
-export class CreateInstitutionDto {
+export class CreateInstitutionFusionAuthDto {
   @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsString()
@@ -14,13 +14,35 @@ export class CreateInstitutionDto {
   @IsString()
   description: string;
 
-  @ApiProperty({ type: GetCategoryDto })
+  @ApiProperty({ type: 'string', format: 'email' })
   @IsNotEmpty()
+  @IsString()
+  contactEmail: string;
+
+  @ApiProperty({ type: 'string' })
+  @IsNotEmpty()
+  @IsPhoneNumber(null)
+  phoneNumber: string;
+}
+
+export class CreateInstitutionInternalDto {
+  @ApiProperty({ type: 'string', format: 'uuid' })
+  @IsNotEmpty()
+  @IsString()
+  institutionTypeId: string;
+
+  @ApiProperty({ type: 'string', format: 'uuid' })
+  @IsNotEmpty()
+  @IsString()
+  institutionAdminId: string;
+
+  @ApiProperty({ type: 'string', format: 'uuid' })
+  @IsNotEmpty()
+  @IsString()
+  addressId: string;
+
+  @ApiProperty({ type: GetCategoryDto, isArray: true })
   @IsArray()
   @Type(() => GetCategoryDto)
   categories: GetCategoryDto[];
 }
-
-export const dto = {
-  create: CreateInstitutionDto
-};

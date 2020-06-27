@@ -16,19 +16,19 @@ export class GetTagWithRelationsDto extends GetTagDto {
   @ApiProperty({ type: InstitutionalOfferEntity, isArray: true, required: false })
   institutionalOffers: InstitutionalOfferEntity[];
 
-  @ApiProperty({type: InstitutionalRequestEntity, isArray: true, required: false})
+  @ApiProperty({ type: InstitutionalRequestEntity, isArray: true, required: false })
   institutionalRequests: InstitutionalRequestEntity[];
 
-  @ApiProperty({type: PrivateOfferEntity, isArray: true, required: false})
+  @ApiProperty({ type: PrivateOfferEntity, isArray: true, required: false })
   privateOffers: PrivateOfferEntity[];
 
   @ApiProperty({ type: PrivateRequestEntity, isArray: true, required: false })
   privateRequests: PrivateRequestEntity[];
 
-  @ApiProperty({type: InstitutionalMatchingProfileEntity, isArray: true, required: false})
+  @ApiProperty({ type: InstitutionalMatchingProfileEntity, isArray: true, required: false })
   institutionalMatchingProfiles: InstitutionalMatchingProfileEntity[];
 
-  @ApiProperty({type: PrivateMatchingProfileEntity, isArray: true, required: false})
+  @ApiProperty({ type: PrivateMatchingProfileEntity, isArray: true, required: false })
   privateMatchingProfiles: PrivateMatchingProfileEntity[];
 }
 
@@ -44,4 +44,4 @@ export const tagJoin = {
   privateRequests: {},
   institutionalMatchingProfiles: {},
   privateMatchingProfiles: {}
-}
+};
