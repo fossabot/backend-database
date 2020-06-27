@@ -1,7 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsDate, IsEmail, IsEnum, IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator';
 import { Gender } from '../..';
-import { BaseResponseDto } from '../baseResponse.dto';
 
 export class GetInstitutionAdminDto {
   @ApiProperty({ type: 'string', format: 'uuid' })
@@ -40,7 +39,7 @@ export class GetInstitutionAdminDto {
   biography?: string;
 }
 
-export class GetInstitutionAdminPublicDto extends BaseResponseDto {
+export class GetInstitutionAdminPublicDto {
   @ApiProperty({ type: 'string' })
   @IsNotEmpty()
   @IsString()

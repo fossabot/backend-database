@@ -1,5 +1,4 @@
 import { Gender } from '../..';
-import { BaseResponseDto } from '../baseResponse.dto';
 export declare class GetInstitutionAdminDto {
     id: string;
     gender: Gender;
@@ -9,7 +8,7 @@ export declare class GetInstitutionAdminDto {
     dob?: Date;
     biography?: string;
 }
-export declare class GetInstitutionAdminPublicDto extends BaseResponseDto {
+export declare class GetInstitutionAdminPublicDto {
     name: string;
     email: string;
 }

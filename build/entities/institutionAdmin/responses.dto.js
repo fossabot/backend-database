@@ -1,17 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -26,7 +13,6 @@ exports.GetInstitutionAdminPublicDto = exports.GetInstitutionAdminDto = void 0;
 var swagger_1 = require("@nestjs/swagger");
 var class_validator_1 = require("class-validator");
 var __1 = require("../..");
-var baseResponse_dto_1 = require("../baseResponse.dto");
 var GetInstitutionAdminDto = /** @class */ (function () {
     function GetInstitutionAdminDto() {
     }
@@ -75,10 +61,8 @@ var GetInstitutionAdminDto = /** @class */ (function () {
     return GetInstitutionAdminDto;
 }());
 exports.GetInstitutionAdminDto = GetInstitutionAdminDto;
-var GetInstitutionAdminPublicDto = /** @class */ (function (_super) {
-    __extends(GetInstitutionAdminPublicDto, _super);
+var GetInstitutionAdminPublicDto = /** @class */ (function () {
     function GetInstitutionAdminPublicDto() {
-        return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
         swagger_1.ApiProperty({ type: 'string' }),
@@ -93,5 +77,5 @@ var GetInstitutionAdminPublicDto = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], GetInstitutionAdminPublicDto.prototype, "email", void 0);
     return GetInstitutionAdminPublicDto;
-}(baseResponse_dto_1.BaseResponseDto));
+}());
 exports.GetInstitutionAdminPublicDto = GetInstitutionAdminPublicDto;
