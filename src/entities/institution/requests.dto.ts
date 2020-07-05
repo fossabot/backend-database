@@ -31,16 +31,6 @@ export class CreateInstitutionInternalDto {
   @IsString()
   institutionTypeId: string;
 
-  @ApiProperty({ type: 'string', format: 'uuid' })
-  @IsNotEmpty()
-  @IsString()
-  institutionAdminId: string;
-
-  @ApiProperty({ type: 'string', format: 'uuid' })
-  @IsNotEmpty()
-  @IsString()
-  addressId: string;
-
   @ApiProperty({ type: GetCategoryDto, isArray: true })
   @IsArray()
   @Type(() => GetCategoryDto)

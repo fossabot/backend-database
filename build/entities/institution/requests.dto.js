@@ -54,18 +54,6 @@ var CreateInstitutionInternalDto = /** @class */ (function () {
         __metadata("design:type", String)
     ], CreateInstitutionInternalDto.prototype, "institutionTypeId", void 0);
     __decorate([
-        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsString(),
-        __metadata("design:type", String)
-    ], CreateInstitutionInternalDto.prototype, "institutionAdminId", void 0);
-    __decorate([
-        swagger_1.ApiProperty({ type: 'string', format: 'uuid' }),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsString(),
-        __metadata("design:type", String)
-    ], CreateInstitutionInternalDto.prototype, "addressId", void 0);
-    __decorate([
         swagger_1.ApiProperty({ type: __1.GetCategoryDto, isArray: true }),
         class_validator_1.IsArray(),
         class_transformer_1.Type(function () { return __1.GetCategoryDto; }),

@@ -7,8 +7,6 @@ export declare class CreateInstitutionFusionAuthDto {
 }
 export declare class CreateInstitutionInternalDto {
     institutionTypeId: string;
-    institutionAdminId: string;
-    addressId: string;
     categories: GetCategoryDto[];
 }
 export declare class CreateInstitutionDto {
