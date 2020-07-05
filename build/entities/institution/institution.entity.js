@@ -23,30 +23,6 @@ var InstitutionEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], InstitutionEntity.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsString(),
-        __metadata("design:type", String)
-    ], InstitutionEntity.prototype, "name", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsString(),
-        __metadata("design:type", String)
-    ], InstitutionEntity.prototype, "description", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsEmail(),
-        __metadata("design:type", String)
-    ], InstitutionEntity.prototype, "contactEmail", void 0);
-    __decorate([
-        typeorm_1.Column(),
-        class_validator_1.IsOptional(),
-        class_validator_1.IsPhoneNumber(null),
-        __metadata("design:type", String)
-    ], InstitutionEntity.prototype, "phoneNumber", void 0);
-    __decorate([
         typeorm_1.Column('uuid'),
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsUUID('4'),

@@ -1,10 +1,6 @@
 import { AddressEntity, CategoryEntity, InstitutionAdminEntity, InstitutionalMatchingProfileEntity, InstitutionalOfferEntity, InstitutionalRequestEntity, InstitutionTypeEntity, RewardRecordEntity } from '../..';
 export declare class InstitutionEntity {
     id: string;
-    name: string;
-    description: string;
-    contactEmail: string;
-    phoneNumber: string;
     institutionTypeId: string;
     institutionAdminId: string;
     addressId: string;

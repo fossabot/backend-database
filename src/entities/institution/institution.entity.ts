@@ -9,26 +9,6 @@ export class InstitutionEntity {
   @Generated('uuid')
   id: string;
 
-  @Column()
-  @IsNotEmpty()
-  @IsString()
-  name: string;
-
-  @Column()
-  @IsNotEmpty()
-  @IsString()
-  description: string;
-
-  @Column()
-  @IsNotEmpty()
-  @IsEmail()
-  contactEmail: string;
-
-  @Column()
-  @IsOptional()
-  @IsPhoneNumber(null)
-  phoneNumber: string;
-
   @Column('uuid')
   @IsNotEmpty()
   @IsUUID('4')
