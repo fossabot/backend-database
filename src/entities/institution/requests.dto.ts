@@ -46,3 +46,13 @@ export class CreateInstitutionInternalDto {
   @Type(() => GetCategoryDto)
   categories: GetCategoryDto[];
 }
+
+export class CreateInstitutionDto {
+  @ApiProperty({ type: GetCategoryDto })
+  @IsNotEmpty()
+  internal: CreateInstitutionInternalDto;
+
+  @ApiProperty({ type: GetCategoryDto })
+  @IsNotEmpty()
+  data: CreateInstitutionFusionAuthDto;
+}

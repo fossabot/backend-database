@@ -11,3 +11,7 @@ export declare class CreateInstitutionInternalDto {
     addressId: string;
     categories: GetCategoryDto[];
 }
+export declare class CreateInstitutionDto {
+    internal: CreateInstitutionInternalDto;
+    data: CreateInstitutionFusionAuthDto;
+}

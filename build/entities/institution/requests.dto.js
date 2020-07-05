@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateInstitutionInternalDto = exports.CreateInstitutionFusionAuthDto = void 0;
+exports.CreateInstitutionDto = exports.CreateInstitutionInternalDto = exports.CreateInstitutionFusionAuthDto = void 0;
 var class_validator_1 = require("class-validator");
 var swagger_1 = require("@nestjs/swagger");
 var __1 = require("../..");
@@ -74,3 +74,19 @@ var CreateInstitutionInternalDto = /** @class */ (function () {
     return CreateInstitutionInternalDto;
 }());
 exports.CreateInstitutionInternalDto = CreateInstitutionInternalDto;
+var CreateInstitutionDto = /** @class */ (function () {
+    function CreateInstitutionDto() {
+    }
+    __decorate([
+        swagger_1.ApiProperty({ type: __1.GetCategoryDto }),
+        class_validator_1.IsNotEmpty(),
+        __metadata("design:type", CreateInstitutionInternalDto)
+    ], CreateInstitutionDto.prototype, "internal", void 0);
+    __decorate([
+        swagger_1.ApiProperty({ type: __1.GetCategoryDto }),
+        class_validator_1.IsNotEmpty(),
+        __metadata("design:type", CreateInstitutionFusionAuthDto)
+    ], CreateInstitutionDto.prototype, "data", void 0);
+    return CreateInstitutionDto;
+}());
+exports.CreateInstitutionDto = CreateInstitutionDto;
