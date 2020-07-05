@@ -6,7 +6,9 @@ export { CategoryEntity } from './entities/category/category.entity';
 export { InstitutionEntity } from './entities/institution/institution.entity';
 export { InstitutionAdminEntity } from './entities/institutionAdmin/institutionAdmin.entity';
 export { InstitutionalItemEntity } from './entities/institutionalItem/institutionalItem.entity';
-export { InstitutionalMatchingProfileEntity } from './entities/institutionalMatchingProfile/institutionalMatchingProfile.entity';
+export {
+  InstitutionalMatchingProfileEntity
+} from './entities/institutionalMatchingProfile/institutionalMatchingProfile.entity';
 export { InstitutionalOfferEntity } from './entities/institutionalOffer/institutionalOffer.entity';
 export { InstitutionalRequestEntity } from './entities/institutionalRequest/institutionalRequest.entity';
 export { InstitutionMemberEntity } from './entities/institutionMember/institutionMember.entity';
@@ -34,14 +36,14 @@ export { ItemType } from './enums/ItemType.enum';
 export { CreateAddressDto } from './entities/address/requests.dto';
 export { GetAddressDto } from './entities/address/responses.dto';
 export { CreateCategoryDto } from './entities/category/requests.dto';
-export { GetCategoryDto } from './entities/category/responses.dto';
-export { GetCategoryWithRelationsDto } from './entities/category/responses.dto';
-export { CreateInstitutionFusionAuthDto } from './entities/institution/requests.dto';
-export { CreateInstitutionInternalDto } from './entities/institution/requests.dto';
+export { GetCategoryDto, GetCategoryWithRelationsDto } from './entities/category/responses.dto';
+export {
+  CreateInstitutionFusionAuthDto,
+  CreateInstitutionInternalDto,
+  CreateInstitutionDto
+} from './entities/institution/requests.dto';
 export { GetInstitutionDto } from './entities/institution/responses.dto';
 export { CreateInstitutionAdminDto } from './entities/institutionAdmin/requests.dto';
-export { GetInstitutionAdminDto } from './entities/institutionAdmin/responses.dto';
-export { GetInstitutionAdminPublicDto } from './entities/institutionAdmin/responses.dto';
+export { GetInstitutionAdminDto, GetInstitutionAdminPublicDto } from './entities/institutionAdmin/responses.dto';
 export { CreateInstitutionTypeDto } from './entities/institutionType/requests.dto';
-export { GetInstitutionTypeDto } from './entities/institutionType/responses.dto';
-export { GetInstitutionTypeWithRelationsDto } from './entities/institutionType/responses.dto';
+export { GetInstitutionTypeDto, GetInstitutionTypeWithRelationsDto } from './entities/institutionType/responses.dto';
