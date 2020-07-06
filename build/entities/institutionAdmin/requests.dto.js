@@ -49,7 +49,7 @@ var CreateInstitutionAdminDto = /** @class */ (function () {
     __decorate([
         swagger_1.ApiProperty({ type: 'string', required: false }),
         class_validator_1.IsOptional(),
-        class_validator_1.IsEmail(),
+        class_validator_1.IsString(),
         __metadata("design:type", String)
     ], CreateInstitutionAdminDto.prototype, "biography", void 0);
     return CreateInstitutionAdminDto;

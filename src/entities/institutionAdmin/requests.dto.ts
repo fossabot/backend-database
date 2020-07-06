@@ -30,6 +30,6 @@ export class CreateInstitutionAdminDto {
 
   @ApiProperty({ type: 'string', required: false })
   @IsOptional()
-  @IsEmail()
+  @IsString()
   biography?: string;
 }
