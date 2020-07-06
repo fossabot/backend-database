@@ -44,7 +44,7 @@ var AddressEntity = /** @class */ (function (_super) {
         __metadata("design:type", String)
     ], AddressEntity.prototype, "number", void 0);
     __decorate([
-        typeorm_1.Column(),
+        typeorm_1.Column({ nullable: true }),
         class_validator_1.IsOptional(),
         class_validator_1.IsString(),
         __metadata("design:type", String)
