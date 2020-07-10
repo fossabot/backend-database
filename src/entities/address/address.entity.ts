@@ -14,7 +14,7 @@ export class AddressEntity extends BaseEntity {
   @IsAlphanumeric()
   number: string;
 
-  @Column({nullable: true})
+  @Column({ nullable: true })
   @IsOptional()
   @IsString()
   addition?: string;

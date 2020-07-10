@@ -1,6 +1,6 @@
 import { IsArray, IsNotEmpty, IsPhoneNumber, IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { GetCategoryDto } from '../..';
+import { CreateAddressDto, GetCategoryDto } from '../..';
 import { Type } from 'class-transformer';
 
 export class CreateInstitutionFusionAuthDto {
@@ -35,6 +35,11 @@ export class CreateInstitutionInternalDto {
   @IsArray()
   @Type(() => GetCategoryDto)
   categories: GetCategoryDto[];
+
+  @ApiProperty({ type: CreateAddressDto })
+  @IsArray()
+  @Type(() => CreateAddressDto)
+  address: CreateAddressDto;
 }
 
 export class CreateInstitutionDto {

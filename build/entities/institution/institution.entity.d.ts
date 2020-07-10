@@ -3,7 +3,6 @@ export declare class InstitutionEntity {
     id: string;
     institutionTypeId: string;
     institutionAdminId: string;
-    addressId: string;
     categories: CategoryEntity[];
     institutionType: InstitutionTypeEntity;
     institutionAdmin: InstitutionAdminEntity;

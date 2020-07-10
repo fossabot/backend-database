@@ -35,12 +35,6 @@ var InstitutionEntity = /** @class */ (function () {
         __metadata("design:type", String)
     ], InstitutionEntity.prototype, "institutionAdminId", void 0);
     __decorate([
-        typeorm_1.Column('uuid'),
-        class_validator_1.IsNotEmpty(),
-        class_validator_1.IsUUID('4'),
-        __metadata("design:type", String)
-    ], InstitutionEntity.prototype, "addressId", void 0);
-    __decorate([
         class_validator_1.IsNotEmpty(),
         class_validator_1.IsArray(),
         class_transformer_1.Type(function () { return __1.CategoryEntity; }),

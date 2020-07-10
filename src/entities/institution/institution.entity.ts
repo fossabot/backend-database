@@ -1,4 +1,4 @@
-import { IsArray, IsEmail, IsNotEmpty, IsOptional, IsPhoneNumber, IsString, IsUUID } from 'class-validator';
+import { IsArray, IsNotEmpty, IsUUID } from 'class-validator';
 import { Column, Entity, Generated, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
 import { AddressEntity, CategoryEntity, InstitutionAdminEntity, InstitutionalMatchingProfileEntity, InstitutionalOfferEntity, InstitutionalRequestEntity, InstitutionTypeEntity, RewardRecordEntity } from '../..';
 import { Type } from 'class-transformer';
@@ -18,11 +18,6 @@ export class InstitutionEntity {
   @IsNotEmpty()
   @IsUUID('4')
   institutionAdminId: string;
-
-  @Column('uuid')
-  @IsNotEmpty()
-  @IsUUID('4')
-  addressId: string;
 
   /*
    * Relations

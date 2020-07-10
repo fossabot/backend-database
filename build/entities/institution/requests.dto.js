@@ -59,6 +59,12 @@ var CreateInstitutionInternalDto = /** @class */ (function () {
         class_transformer_1.Type(function () { return __1.GetCategoryDto; }),
         __metadata("design:type", Array)
     ], CreateInstitutionInternalDto.prototype, "categories", void 0);
+    __decorate([
+        swagger_1.ApiProperty({ type: __1.CreateAddressDto }),
+        class_validator_1.IsArray(),
+        class_transformer_1.Type(function () { return __1.CreateAddressDto; }),
+        __metadata("design:type", __1.CreateAddressDto)
+    ], CreateInstitutionInternalDto.prototype, "address", void 0);
     return CreateInstitutionInternalDto;
 }());
 exports.CreateInstitutionInternalDto = CreateInstitutionInternalDto;
