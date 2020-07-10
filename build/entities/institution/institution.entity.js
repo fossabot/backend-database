@@ -65,7 +65,7 @@ var InstitutionEntity = /** @class */ (function () {
         __metadata("design:type", __1.InstitutionAdminEntity)
     ], InstitutionEntity.prototype, "institutionAdmin", void 0);
     __decorate([
-        typeorm_1.OneToOne(function () { return __1.AddressEntity; }),
+        typeorm_1.OneToOne(function () { return __1.AddressEntity; }, { cascade: true }),
         typeorm_1.JoinColumn(),
         __metadata("design:type", __1.AddressEntity)
     ], InstitutionEntity.prototype, "address", void 0);

@@ -1,6 +1,26 @@
 import { IsArray, IsNotEmpty, IsUUID } from 'class-validator';
-import { Column, Entity, Generated, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from 'typeorm';
-import { AddressEntity, CategoryEntity, InstitutionAdminEntity, InstitutionalMatchingProfileEntity, InstitutionalOfferEntity, InstitutionalRequestEntity, InstitutionTypeEntity, RewardRecordEntity } from '../..';
+import {
+  Column,
+  Entity,
+  Generated,
+  JoinColumn,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryColumn
+} from 'typeorm';
+import {
+  AddressEntity,
+  CategoryEntity,
+  InstitutionAdminEntity,
+  InstitutionalMatchingProfileEntity,
+  InstitutionalOfferEntity,
+  InstitutionalRequestEntity,
+  InstitutionTypeEntity,
+  RewardRecordEntity
+} from '../..';
 import { Type } from 'class-transformer';
 
 @Entity('institutions')
@@ -49,7 +69,7 @@ export class InstitutionEntity {
   @JoinColumn()
   institutionAdmin: InstitutionAdminEntity;
 
-  @OneToOne(() => AddressEntity)
+  @OneToOne(() => AddressEntity, { cascade: true })
   @JoinColumn()
   address: AddressEntity;
 
