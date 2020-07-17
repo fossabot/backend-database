@@ -1,4 +1,6 @@
 # impAct - backend-database
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimpactify%2Fbackend-database.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fimpactify%2Fbackend-database?ref=badge_shield)
+
 Contains all entities and DTOs including validation and [OpenAPI](https://swagger.io/specification/) annotations.
 The latter are dependent on [NestJS](https://docs.nestjs.com/) used for microservices, so additional dependencies are needed.
 The ORM used is [TypeORM](https://typeorm.io).
@@ -35,3 +37,7 @@ You can install the module with npm directly from GitHub.
 * [NestJS OpenAPI/Swagger](https://docs.nestjs.com/recipes/swagger)
 * [Class-Validator](https://github.com/typestack/class-validator)
 * [TypeORM / Postgres column types](https://github.com/typeorm/typeorm/blob/master/test/functional/database-schema/column-types/postgres/entity/Post.ts#L144)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fimpactify%2Fbackend-database.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fimpactify%2Fbackend-database?ref=badge_large)
